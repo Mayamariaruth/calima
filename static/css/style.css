@@ -1,0 +1,25 @@
+/* General styles */
+body, html {
+    max-width: 2000px
+}
+
+main {
+    margin-top: 3.5rem;
+    background-color: #298670;
+}
+
+/* Navigation bar */
+nav {
+    background-color: #DFDFD9;
+}
+
+/* Hero */
+.hero-image {
+    background: url(../images/hero.jpg) no-repeat center center/cover;
+    height: 100vh;
+}
+
+/* Footer */
+footer {
+    background-color: #DFDFD9;
+}
