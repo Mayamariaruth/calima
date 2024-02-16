@@ -10,7 +10,8 @@ main {
 
 /* Navigation bar */
 nav {
-    background-color: #DFDFD9;
+    /* background-color: #DFDFD9;*/
+    background-color: rgba(126,187,165, 0.4);
 }
 
 #title {
@@ -19,7 +20,7 @@ nav {
 }
 
 #font-size {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
 }
 
 .nav-underline {
@@ -34,9 +35,31 @@ nav {
 
 /* Footer */
 footer {
-    background-color: #DFDFD9;
+    background-color: rgba(126,187,165, 0.6);
 }
 
+.row {
+    gap: 5rem;
+}
+
+h3 {
+    margin-top: 1rem;
+    margin-bottom: 17px;
+}
+
+.footer-text {
+    font-size: 1.1rem;
+}
+
+#list-style {
+    list-style-type: none;
+    padding: 0;
+}
+
+.socials {
+    text-decoration: none;
+    color: black;
+}
 
 @media (min-width: 992px) {
     
