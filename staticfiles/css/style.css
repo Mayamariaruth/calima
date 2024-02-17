@@ -1,8 +1,66 @@
+/* General styles */
+body, html {
+    max-width: 2000px
+}
+
 main {
-    margin-top: 3.6rem;
+    margin-top: 6.1rem;
     background-color: #298670;
 }
 
+/* Navigation bar */
 nav {
-    background-color: #DFDFD9;
+    /* background-color: #DFDFD9;*/
+    background-color: rgba(126,187,165, 0.4);
+}
+
+#title {
+    font-family: 'Protest Riot', sans-serif;
+    font-size: 3rem;
+}
+
+#font-size {
+    font-size: 1.1rem;
+}
+
+.nav-underline {
+    width: 3.7rem;
+}
+
+/* Hero */
+.hero-image {
+    background: url(../images/hero.jpg) no-repeat center center/cover;
+    height: 100vh;
+}
+
+/* Footer */
+footer {
+    background-color: rgba(126,187,165, 0.6);
+}
+
+.row {
+    gap: 5rem;
+}
+
+#margin {
+    margin-top: 1rem;
+    margin-bottom: 17px;
+}
+
+.footer-text {
+    font-size: 1.1rem;
+}
+
+#list-style {
+    list-style-type: none;
+    padding: 0;
+}
+
+.socials {
+    text-decoration: none;
+    color: black;
+}
+
+@media (min-width: 992px) {
+    
 }
