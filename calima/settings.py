@@ -28,7 +28,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = 'django-insecure-42q^)tya@u$%-vfa=qi9*1spom!65gjkoa^gbcy8liwft$$-*j'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', '.herokuapp.com']
 
@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'home',
+    'booking',
 ]
 
 # UPPDATERA VILKEN SIDA MAN HAMNAR PÅ NÄR MAN LOGGAT IN????
