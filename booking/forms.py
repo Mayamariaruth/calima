@@ -1,5 +1,7 @@
+import datetime
 from .models import Booking
 from django import forms
+from django.core.validators import MinValueValidator, MaxValueValidator
 
 
 # Create your forms here.
@@ -9,4 +11,12 @@ class BookingForm(forms.ModelForm):
     """
     class Meta:
         model = Booking
-        fields = ('date', 'time', 'number_of_people',)
+        fields = ('first_name', 'last_name', 'email', 'date', 'time', 'number_of_people',)
+        widgets = {
+            'date': forms.DateInput(attrs={'type': 'date'}),
+            'time': forms.Select(),
+        }
+        validators = {
+            'number_of_people': [MinValueValidator(1), MaxValueValidator(6)],
+            'date': [MinValueValidator(datetime.date.today)]
+        }
