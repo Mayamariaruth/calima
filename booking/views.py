@@ -8,12 +8,13 @@ def book_table(request):
     """
     Creates a user request for a table booking
     """
+    heading = 'Book a table'
+
     if request.method == "POST" and request.user.is_authenticated:
-        heading = 'Book a table'
         booking_form = BookingForm(data=request.POST)
 
         if booking_form.is_valid():
-            form = booking_form.save()
+            form = booking_form.save(commit=False)
             form.author = request.user
             form.save()
             return render(request, 'booking_success')
@@ -25,7 +26,7 @@ def book_table(request):
     else:
         booking_form = BookingForm()
 
-    return render(request, 'booking/booking_form.html', {'form': booking_form})
+    return render(request, 'booking/booking_form.html', {'form': booking_form, 'heading': heading})
 
 
 def booking_success(request):

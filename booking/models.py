@@ -36,8 +36,9 @@ class Booking(models.Model):
     number_of_people = models.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(6)])
     date = models.DateField(validators=[MinValueValidator(date.today)])
     time = models.CharField(max_length=5, choices=available_times)
+    special_requests = models.CharField(max_length=500, default='')
     date_of_request = models.DateTimeField(auto_now_add=True)
     status = models.CharField(max_length=10, choices=booking_status, default="pending")
 
     def __str__(self):
-        return f"{self.first_name} {self.last_name} - {self.date} {self.time} / {self.booking_status}"
+        return f"{self.first_name} {self.last_name} - {self.date} {self.time} / {self.status}"
