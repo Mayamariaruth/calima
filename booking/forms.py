@@ -11,7 +11,11 @@ class BookingForm(forms.ModelForm):
     """
     class Meta:
         model = Booking
-        fields = ('first_name', 'last_name', 'email', 'date', 'time', 'number_of_people', 'special_requests',)
+        fields = (
+            'first_name', 'last_name', 'email',
+            'date', 'time', 'number_of_people',
+            'special_requests',
+            )
 
         widgets = {
             'date': forms.DateInput(attrs={'type': 'date'}),

@@ -1,4 +1,6 @@
 from django.contrib import admin
+from django.contrib.sites.models import Site
+from django.contrib.auth.models import Group
 from django.urls import path, include
 
 
@@ -8,3 +10,7 @@ urlpatterns = [
     path('', include('booking.urls'), name='booking_urls'),
     path('', include('home.urls'), name='home_urls'),
 ]
+
+
+admin.site.unregister(Site)
+admin.site.unregister(Group)

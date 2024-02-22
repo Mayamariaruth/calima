@@ -25,20 +25,24 @@ class Booking(models.Model):
     Booking tables model
     """
     booking_status = [
-    ('pending', 'pending'),
-    ('approved', 'approved'),
-    ('denied', 'denied'),
+        ('pending', 'pending'),
+        ('approved', 'approved'),
+        ('denied', 'denied'),
     ]
 
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
     email = models.EmailField()
-    number_of_people = models.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(6)])
+    number_of_people = models.IntegerField(
+        validators=[MinValueValidator(1), MaxValueValidator(6)]
+        )
     date = models.DateField(validators=[MinValueValidator(date.today)])
     time = models.CharField(max_length=5, choices=available_times)
-    special_requests = models.CharField(max_length=500, default='')
+    special_requests = models.CharField(max_length=500, blank=True)
     date_of_request = models.DateTimeField(auto_now_add=True)
-    status = models.CharField(max_length=10, choices=booking_status, default="pending")
+    status = models.CharField(
+        max_length=10, choices=booking_status, default="pending"
+        )
 
     def __str__(self):
-        return f"{self.first_name} {self.last_name} - {self.date} {self.time} / {self.status}"
+        return f"{self.first_name} - {self.date} {self.time} / {self.status}"

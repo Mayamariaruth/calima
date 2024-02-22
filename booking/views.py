@@ -1,7 +1,7 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render
 from django.contrib import messages
-from .models import Booking
 from .forms import BookingForm
+
 
 # Create your views here.
 def book_table(request):
@@ -19,14 +19,19 @@ def book_table(request):
             form.save()
             return render(request, 'booking_success')
         else:
-            messages.info(
-            request,
-            ("Please login/signup as a customer to book a table!")
-            )
+            if request.user.is_staff:
+                messages.info(
+                    request,
+                    ("Please login/signup as a customer to book a table!")
+                )
     else:
         booking_form = BookingForm()
 
-    return render(request, 'booking/booking_form.html', {'form': booking_form, 'heading': heading})
+    return render(
+        request,
+        'booking/booking_form.html',
+        {'form': booking_form, 'heading': heading}
+        )
 
 
 def booking_success(request):
