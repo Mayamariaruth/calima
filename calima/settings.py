@@ -1,6 +1,6 @@
 from pathlib import Path
-import os
 import dj_database_url
+import os
 if os.path.isfile('env.py'):
     import env
 
