@@ -19,6 +19,7 @@
         <div>
             <h2>My Bookings</h2>
             <hr>
+            {% if user_bookings %}
             {% for booking in user_bookings %}
             <table>
                 <tr>
@@ -35,6 +36,11 @@
                 </tr>
             </table>
             {% endfor %}
+            {% else %}
+            <div>
+                <p>There are no active bookings or requests for this account.</p>
+            </div>
+            {% endif %}
         </div>
     </section>
 </div>

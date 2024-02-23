@@ -20,13 +20,13 @@ class BookingForm(forms.ModelForm):
             'date': forms.DateInput(attrs={'type': 'date'}),
             'time': forms.Select(choices=available_times),
         }
-    
+
     def clean_date(self):
         """
         Validation for the date field
         """
         date = self.cleaned_data['date']
-        
+
         if date < datetime.date.today():
             raise forms.ValidationError("Booking date cannot be in the past.")
         return date

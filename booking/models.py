@@ -1,6 +1,4 @@
-from datetime import date
 from django.db import models
-from django.core.validators import MinValueValidator, MaxValueValidator
 from django.contrib.auth.models import User
 
 
@@ -35,10 +33,8 @@ class Booking(models.Model):
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
     email = models.EmailField()
-    number_of_people = models.IntegerField(
-        validators=[MinValueValidator(1), MaxValueValidator(6)]
-        )
-    date = models.DateField(validators=[MinValueValidator(date.today)])
+    number_of_people = models.IntegerField()
+    date = models.DateField()
     time = models.CharField(max_length=5, choices=available_times)
     special_requests = models.CharField(max_length=500, blank=True)
     date_of_request = models.DateTimeField(auto_now_add=True)
@@ -47,4 +43,4 @@ class Booking(models.Model):
         )
 
     def __str__(self):
-        return f"{self.first_name} - {self.date} {self.time} / {self.status}"
+        return f"{self.user} - {self.date} {self.time} / {self.status}"
