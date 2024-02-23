@@ -17,7 +17,7 @@ def book_table(request):
             form = booking_form.save(commit=False)
             form.author = request.user
             form.save()
-            return render(request, 'booking_success')
+            return render(request, 'booking/booking_success.html')
         else:
             if request.user.is_staff:
                 messages.info(

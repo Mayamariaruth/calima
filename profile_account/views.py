@@ -11,7 +11,7 @@ def profile_account(request):
         username = request.user.username
         emailaddress = request.user.email
 
-        user_bookings = Booking.objects.all().values()
+        user_bookings = Booking.objects.filter(email=request.user).order_by('-date', '-time')
 
         context = {
             'firstname': firstname,
@@ -20,4 +20,4 @@ def profile_account(request):
             'emailaddress': emailaddress,
             'user_bookings': user_bookings
         }
-        return render(request, 'profiles/profile.html', context)
+        return render(request, 'accounts/profile.html', context)
