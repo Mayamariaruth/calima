@@ -3,6 +3,7 @@
 {% block content %}
 {% load static %}
 
+{% if user.is_authenticated and not is_admin %}
 <div>
     <section>
         <h2>My profile</h2>
@@ -37,5 +38,5 @@
         </div>
     </section>
 </div>
-
+{% endif %}
 {% endblock content %}
