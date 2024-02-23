@@ -21,3 +21,11 @@ def profile_account(request):
             'user_bookings': user_bookings
         }
         return render(request, 'accounts/profile.html', context)
+
+
+def delete_account(request):
+    return render(request, 'accounts/delete_account.html')
+
+
+def edit_details(request):
+    return render(request, 'accounts/edit_details.html')
