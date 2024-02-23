@@ -8,7 +8,8 @@
         <h2>My profile</h2>
         <hr>
         <h3>Account details</h3>
-        <p><span>Name:</span> {{ firstname }} {{ lastname }}</p>
+        <p><span>First name:</span> {{ firstname }}</p>
+        <p><span>Last name:</span>{{ lastname }}</p>
         <p><span>Username:</span> {{ username }}</p>
         <p><span>Email:</span> {{ emailaddress }}</p>
         <a href="{% url 'edit_details' %}">Edit account details</a>

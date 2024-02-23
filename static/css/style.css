@@ -28,7 +28,7 @@ nav {
 }
 
 /* Hero */
-.hero-image {
+.hero-image, .hero-bg {
     background: url(../images/hero.jpg) no-repeat center center/cover;
     height: 100vh;
 }
