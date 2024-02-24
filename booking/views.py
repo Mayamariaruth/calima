@@ -1,7 +1,6 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
-from django import forms
 from .forms import BookingForm
 from .models import Booking
 
@@ -10,8 +9,9 @@ from .models import Booking
 @login_required
 def book_table(request):
     """
-    Creates a user request for a table booking
-    and validates that an identical booking doesn't already exist
+    Creates a user request for a table booking.
+    Validates that an identical booking doesn't already exist
+    and that you can't book same-day bookings
     """
     heading = 'Book a table'
 

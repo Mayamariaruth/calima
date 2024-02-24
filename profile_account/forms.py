@@ -49,17 +49,21 @@ class EditBookingForm(forms.ModelForm):
     
     def clean_date(self):
         """
-        Validation for the date field
+        Validating that the booking date is not in the past
+        or the same day user is making the request
         """
-        date = self.cleaned_data['date']
+        date = self.cleaned_data.get('date')
 
-        if date < datetime.date.today():
+        if date == datetime.date.today():
+            raise forms.ValidationError("It is not possible to book same-day bookings.")
+        elif date and date < datetime.date.today():
             raise forms.ValidationError("Booking date cannot be in the past.")
+        
         return date
 
     def clean_number_of_people(self):
         """
-        Validation for the number_of_people field
+        Validating that the number of people is between 1-6
         """
         number_of_people = self.cleaned_data['number_of_people']
 
@@ -67,4 +71,5 @@ class EditBookingForm(forms.ModelForm):
             raise forms.ValidationError("Number of people must be at least 1.")
         elif number_of_people > 6:
             raise forms.ValidationError("Number of people cannot exceed 6.")
+        
         return number_of_people
