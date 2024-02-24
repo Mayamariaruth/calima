@@ -4,17 +4,6 @@
 {% load static %}
 {% load crispy_forms_tags %}
 
-{% if messages %}
-{% for message in messages %}
-    <div class="mx-auto alert alert-dismissible fade show alert-{{ message.tags }}">
-           {{ message }}
-           <button type="button" class="close" data-bs-dismiss="alert" aria-label="Close">
-             <span aria-hidden="true"><i class="fa-solid fa-xmark"></i></span>
-           </button>
-    </div>
-{% endfor %}
-{% endif %}
-
 <!-- Booking form -->
 <div>
     <section>

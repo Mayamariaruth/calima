@@ -1,13 +1,5 @@
 {% load static %}
 
-{% url 'home' as home_url %}
-{% url 'admin' as admin_url %}
-{% url 'book_table' as booking_url %}
-{% url 'profile_account' as profile_url %}
-{% url 'account_login' as login_url %}
-{% url 'account_signup' as signup_url %}
-{% url 'account_logout' as logout_url %}
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -64,7 +56,8 @@
 
                     {% if user.is_authenticated and is_admin %}
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == admin_url %}active{% endif %}" aria-current="page" href="{% url 'admin:index' %}">Admin</a>
+                        <a class="nav-link {% if request.path == admin_url %}active{% endif %}" aria-current="page"
+                            href="{% url 'admin:index' %}">Admin</a>
                     </li>
                     {% endif %}
 
@@ -96,6 +89,16 @@
         <p class="text-end m-3 opacity-50">You are logged in as {{ user }}</p>
         {% endif %}
     </nav>
+
+    <!-- Messages -->
+    <div class="">
+        {% for message in messages %}
+        <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
+            {{ message | safe }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endfor %}
+    </div>
 
     <main>
         {% block content %}

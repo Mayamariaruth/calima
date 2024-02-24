@@ -65,11 +65,9 @@ class EditBookingForm(forms.ModelForm):
         """
         Validating that the number of people is between 1-6
         """
-        number_of_people = self.cleaned_data['number_of_people']
+        number_of_people = self.cleaned_data.get('number_of_people')
 
-        if number_of_people < 1:
-            raise forms.ValidationError("Number of people must be at least 1.")
-        elif number_of_people > 6:
-            raise forms.ValidationError("Number of people cannot exceed 6.")
+        if number_of_people and (number_of_people < 1 or number_of_people > 6):
+            raise forms.ValidationError("Number of people must be between 1 and 6.")
         
         return number_of_people

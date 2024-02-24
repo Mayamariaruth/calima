@@ -86,7 +86,7 @@ def update_bookings(user):
 @login_required
 def edit_booking(request, booking_id):
     """
-    Edit specific user booking
+    Edit specific user booking.
     Validating that the booking doesn't already exist
     """
     booking = get_object_or_404(Booking, id=booking_id)
@@ -107,6 +107,7 @@ def edit_booking(request, booking_id):
                 return render(request, 'accounts/edit_booking.html', {'form': form})
             
             edited_booking.save()
+            messages.success(request, 'Your booking has been updated successfully!')
             return redirect('profile_account')
     else:
         form = EditBookingForm(instance=booking)
