@@ -46,7 +46,7 @@ def edit_details(request):
     """
     Edit user account details
     """
-    user = get_object_or_404(request.user)
+    user = request.user
 
     if request.method == 'POST':
         edit_form = EditForm(request.POST, instance=user)

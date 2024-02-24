@@ -1,5 +1,6 @@
 import datetime
 from .models import Booking, available_times
+from django.core.validators import MinValueValidator, MaxValueValidator
 from django import forms
 
 
