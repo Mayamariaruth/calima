@@ -88,7 +88,7 @@ def update_bookings(user):
 @login_required
 def edit_booking(request, booking_id):
     """
-    Edit user booking request
+    Edit specific user booking
     """
     booking = get_object_or_404(Booking, id=booking_id)
 
@@ -104,8 +104,16 @@ def edit_booking(request, booking_id):
 
 
 @login_required
-def delete_booking(request):
+def delete_booking(request, booking_id):
     """
-    Delete user booking
+    Delete specific user booking
     """
-    return render(request, 'accounts/delete_booking.html')
+    booking = get_object_or_404(Booking, id=booking_id)
+
+    if request.method == 'POST':
+        user = request.user
+        booking.delete()
+        messages.success(request, 'Your booking has been deleted successfully.')
+        return redirect('profile_account')
+    else:
+        return render(request, 'accounts/delete_booking.html')
