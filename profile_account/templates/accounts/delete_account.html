@@ -10,7 +10,7 @@
         <p>If you delete your account, you will lose all your requests and active bookings.</p>
         <form method="post">
             {% csrf_token %}
-            <button type="submit">Delete account</button>
+            <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Delete account</button>
             <a href="{% url 'profile_account' %}"><span>Cancel</span></a>
         </form>
     </section>

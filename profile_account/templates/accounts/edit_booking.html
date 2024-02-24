@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+<div>
+    <section>
+        <form method="post">
+            {{ EditBookingForm|crispy }}
+            {% csrf_token %}
+            <button type="submit">Save changes</button>
+        </form>
+    </section>
+</div>
+
+{% endblock content %}

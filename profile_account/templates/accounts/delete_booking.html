@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% load static %}
+
+<div>
+    <section>
+        <form method="post">
+            {% csrf_token %}
+            <button type="submit">Delete</button>
+        </form>
+    </section>
+</div>
+
+{% endblock content %}

@@ -1,5 +1,6 @@
 from django import forms
 from django.contrib.auth.models import User
+from booking.models import Booking
 
 
 # Create your forms here.
@@ -30,3 +31,12 @@ class EditForm(forms.ModelForm):
                 self.add_error('email', 'This email is already in use.')
 
         return cleaned_data
+
+
+class EditBookingForm(forms.ModelForm):
+    """
+    Edit booking requests form
+    """
+    class Meta:
+        model = Booking
+        fields = ('date', 'time', 'number_of_people', 'special_requests',)

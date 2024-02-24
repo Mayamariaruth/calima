@@ -3,7 +3,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.models import User
 from booking.models import Booking
-from .forms import EditForm
+from .forms import EditForm, EditBookingForm
 
 
 # Create your views here.
@@ -81,3 +81,29 @@ def update_bookings(user):
         booking.username = user.username
         booking.email = user.email
         booking.save()
+
+
+@login_required
+def edit_booking(request, booking_id):
+    """
+    Edit user booking request
+    """
+    booking = get_object_or_404(Booking, id=booking_id)
+
+    if request.method == 'POST':
+        form = EditBookingForm(request.POST, instance=booking)
+        if form.is_valid():
+            form.save()
+            return redirect('profile_account')
+    else:
+        form = EditBookingForm(instance=booking)
+
+    return render(request, 'accounts/edit_booking.html', {'form': form})
+
+
+@login_required
+def delete_booking(request):
+    """
+    Delete user booking
+    """
+    return render(request, 'accounts/delete_booking.html')
