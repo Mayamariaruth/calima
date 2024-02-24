@@ -4,6 +4,17 @@
 {% load static %}
 {% load crispy_forms_tags %}
 
+{% if messages %}
+{% for message in messages %}
+    <div class="mx-auto alert alert-dismissible fade show alert-{{ message.tags }}">
+           {{ message }}
+           <button type="button" class="close" data-bs-dismiss="alert" aria-label="Close">
+             <span aria-hidden="true"><i class="fa-solid fa-xmark"></i></span>
+           </button>
+    </div>
+{% endfor %}
+{% endif %}
+
 <!-- Booking form -->
 <div>
     <section>
@@ -16,21 +27,15 @@
                 {{ form|crispy }}
                 <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>
             </form>
-            {% if form.errors %}
-            <ul>
-                {% for field in form %}
-                {% for error in field.errors %}
-                <li>{{ error }}</li>
-                {% endfor %}
-                {% endfor %}
-            </ul>
-            {% endif %}
             <div>
                 <h3>Booking Requirements:</h3>
                 <p>Contact Information: Provide your name and email address so we can confirm your booking and contact
                     you if needed.</p>
                 <p>Booking Date and Time: Please select your preferred date and time for the reservation from the
-                    options.</p>
+                    options.
+                    <span class="bold">Please note that we do not accept same-day bookings due to accommodating walk-in
+                        guests.</span>
+                </p>
                 <p>Guests: Specify the number of guests in your party. If you would like to book a table for more than 6
                     people, please contact us at Info@Calima.com.</p>
                 <p>Special Requests: If you have any special requests or preferences (e.g., dietary restrictions,

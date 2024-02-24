@@ -1,10 +1,8 @@
-from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect, get_object_or_404
+from django.contrib.auth.decorators import login_required
 from django.contrib import messages
-from django.contrib.auth.models import User
-from booking.models import Booking
 from .forms import EditForm, EditBookingForm
-
+from booking.models import Booking
 
 # Create your views here.
 def profile_account(request):
@@ -89,13 +87,26 @@ def update_bookings(user):
 def edit_booking(request, booking_id):
     """
     Edit specific user booking
+    Validating that the booking doesn't already exist
     """
     booking = get_object_or_404(Booking, id=booking_id)
 
     if request.method == 'POST':
         form = EditBookingForm(request.POST, instance=booking)
+        
         if form.is_valid():
-            form.save()
+            edited_booking = form.save(commit=False)
+            existing_booking = Booking.objects.filter(
+                user=request.user,
+                date=edited_booking.date,
+                time=edited_booking.time
+            ).exclude(id=booking_id).first()
+            
+            if existing_booking:
+                messages.error(request, 'You already have a booking with the same date and time.')
+                return render(request, 'accounts/edit_booking.html', {'form': form})
+            
+            edited_booking.save()
             return redirect('profile_account')
     else:
         form = EditBookingForm(instance=booking)

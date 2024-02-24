@@ -1,7 +1,9 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
+from django import forms
 from .forms import BookingForm
+from .models import Booking
 
 
 # Create your views here.
@@ -9,6 +11,7 @@ from .forms import BookingForm
 def book_table(request):
     """
     Creates a user request for a table booking
+    and validates that an identical booking doesn't already exist
     """
     heading = 'Book a table'
 
@@ -18,13 +21,22 @@ def book_table(request):
         if form.is_valid():
             booking = form.save(commit=False)
             booking.user = request.user
-            booking.save()
-            return render(request, 'booking/booking_success.html')
+            
+            if Booking.objects.filter(
+                user=booking.user,
+                date=booking.date,
+                time=booking.time,
+            ).exists():
+                messages.error(request, 'You already have a booking with the same date and time.')
+                return render(request, 'booking/booking_form.html', {'form': form})
+            else:
+                booking.save()
+                messages.success(request, 'Booking successful!')
+                return render(request, 'booking/booking_success.html')
         else:
-            messages.error(request, 'Please correct the errors below and try again.')
             return render(request, 'booking/booking_form.html', {'form': form})
     else:
-        booking_form = BookingForm(initial={
+        form = BookingForm(initial={
             'first_name': request.user.first_name,
             'last_name': request.user.last_name,
             'email': request.user.email
@@ -33,7 +45,7 @@ def book_table(request):
         return render(
             request,
             'booking/booking_form.html',
-            {'form': booking_form, 'heading': heading}
+            {'form': form, 'heading': heading}
         )
 
 
