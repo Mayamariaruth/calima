@@ -5,12 +5,14 @@
 
 <div>
     <section>
-        <h2>Are you sure that you want to delete your account?</h2>
+        <h2>Are you sure you want to delete your account?</h2>
         <hr>
-        <p>If you delete your account, you will lose </p>
-
-
-        <a href="{% url 'profile_account' %}"><span>Go back</span></a>
+        <p>If you delete your account, you will lose all your requests and active bookings.</p>
+        <form method="post">
+            {% csrf_token %}
+            <button type="submit">Delete account</button>
+            <a href="{% url 'profile_account' %}"><span>Cancel</span></a>
+        </form>
     </section>
 </div>
 

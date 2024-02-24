@@ -30,29 +30,37 @@ def profile_account(request):
 @login_required
 def delete_account(request):
     """
-    Delete account
+    Delete user account
     """
-    return render(request, 'accounts/delete_account.html')
+    if request.method == 'POST':
+        user = request.user
+        user.delete()
+        messages.success(request, 'Your account has been deleted successfully.')
+        return redirect('home')
+    else:
+        return render(request, 'accounts/delete_account.html')
 
 
 @login_required
 def edit_details(request):
     """
-    Edit account details
+    Edit user account details
     """
+    user = get_object_or_404(request.user)
+
     if request.method == 'POST':
-        edit_form = EditForm(request.POST, instance=request.user)
+        edit_form = EditForm(request.POST, instance=user)
 
         if edit_form.is_valid():
             edit_form.save()
-            update_bookings(request.user)
+            update_bookings(user)
             messages.success(
                 request,
                 'Your account details were updated successfully!'
             )
             return redirect('profile_account')
     else:
-        edit_form = EditForm(instance=request.user)
+        edit_form = EditForm(instance=user)
 
     return render(
         request,
