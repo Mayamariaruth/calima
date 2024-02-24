@@ -15,7 +15,9 @@ def profile_account(request):
         emailaddress = request.user.email
 
         user_bookings = Booking.objects.filter(
-            user=request.user).order_by('-date', '-time')
+            user=request.user).order_by('date', 'time')
+        
+        print(user_bookings)
 
         context = {
             'firstname': firstname,
