@@ -37,8 +37,7 @@ a {
 
 /* Navigation bar */
 nav {
-    /* background-color: #DFDFD9;*/
-    background-color: rgba(126,187,165, 0.4);
+    background-color: rgb(178, 213, 201, 0.9);
 }
 
 #title {
@@ -162,5 +161,8 @@ footer {
 }
 
 @media (min-width: 992px) {
-    
+    /* Navigation bar */
+    nav {
+        background-color: rgba(126,187,165, 0.4);
+    }
 }
