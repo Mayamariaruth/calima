@@ -32,7 +32,7 @@ nav {
 }
 
 #font-size {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
 }
 
 .nav-underline {
@@ -45,7 +45,11 @@ nav {
 }
 
 .alert-success {
-    --bs-alert-bg: rgba(176, 119, 63, 0.2);
+    --bs-alert-bg: rgba(176, 119, 63, 0.4);
+}
+
+.alert-error {
+    background-color: rgba(206, 40, 10, 0.4);
 }
 
 /* Landing page */
@@ -86,7 +90,7 @@ nav {
 }
 
 .front-btn {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     font-weight: 600;
     padding: 1rem;
 }
