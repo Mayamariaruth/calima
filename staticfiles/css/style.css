@@ -45,7 +45,7 @@ nav {
 }
 
 .alert-success {
-    --bs-alert-bg: #D1BF9C;
+    --bs-alert-bg: rgba(176, 119, 63, 0.2);
 }
 
 /* Landing page */

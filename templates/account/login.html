@@ -3,14 +3,14 @@
 {% load i18n %}
 {% load account socialaccount %}
 
-{% block head_title %}{% trans "Sign In" %}{% endblock %}
+{% block head_title %}{% trans "Login" %}{% endblock %}
 
 {% block content %}
 <div class="bg-image">
     <div class="container bg-white bg-opacity pt-4 pb-5 position-container">
         <div class="row">
             <div class="col-md-8 mt-3 offset-md-2">
-                <h3 class="fs-2">{% trans "Sign In" %}</h3>
+                <h3 class="fs-2">{% trans "Login" %}</h3>
                 <hr>
                 <p class="fs-5">{% blocktrans %}Please log in to start booking tables!
                     <br>If you have not created an account yet, then <a class="link" href="{{ signup_url }}">sign up
@@ -26,7 +26,7 @@
                     {% if redirect_field_value %}
                     <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
                     {% endif %}
-                    <button class="btn btn-signup right fw-semibold btn-light btn-lg btn-border btn-outline-dark btn-color" type="submit">{% trans "Sign In" %}</button>
+                    <button class="btn btn-signup right fw-semibold btn-light btn-lg btn-border btn-outline-dark btn-color" type="submit">{% trans "Login" %}</button>
                 </form>
             </div>
         </div>
