@@ -13,8 +13,6 @@ def book_table(request):
     Validates that an identical booking doesn't already exist
     and that you can't book same-day bookings
     """
-    heading = 'Book a table'
-
     if request.method == "POST":
         form = BookingForm(data=request.POST)
 
@@ -45,7 +43,7 @@ def book_table(request):
         return render(
             request,
             'booking/booking_form.html',
-            {'form': form, 'heading': heading}
+            {'form': form}
         )
 
 

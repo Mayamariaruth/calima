@@ -14,10 +14,12 @@
                 <p class="fs-6"><span class="fw-bold">Last name:</span> {{ lastname }}</p>
                 <p class="fs-6"><span class="fw-bold">Username:</span> {{ username }}</p>
                 <p class="fs-6 mb-4"><span class="fw-bold">Email:</span> {{ emailaddress }}</p>
-                <a href="{% url 'edit_details' %}" class="fs-6 fw-semibold btn btn-light btn-lg btn-border btn-outline-dark btn-color me-2">
+                <a href="{% url 'edit_details' %}"
+                    class="fs-6 fw-semibold btn btn-light btn-lg btn-border btn-outline-dark btn-color me-2 mb-4">
                     <span>Edit account details</span>
                 </a>
-                <a href="{% url 'delete_account' %}" class="fs-6 fw-semibold btn btn-light btn-lg btn-border btn-outline-dark btn-color">
+                <a href="{% url 'delete_account' %}"
+                    class="fs-6 fw-semibold btn btn-light btn-lg btn-border btn-outline-dark btn-color mb-4">
                     <span>Delete account</span>
                 </a>
             </div>
@@ -33,7 +35,8 @@
                             <th>Time</th>
                             <th>Guests</th>
                             <th>Status</th>
-                            <th>Actions</th>
+                            <!-- Actions dropdown for smaller screens -->
+                            <th class="d-md-none">Actions</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -42,15 +45,33 @@
                             <td>{{ booking.time }}</td>
                             <td class="text-center">{{ booking.number_of_people }}</td>
                             <td>{{ booking.status }}</td>
-                            <td>
-                                <a class="btn btn-light btn-border btn-outline-dark btn-color fw-semibold" href="{% url 'edit_booking' booking.id %}">
+                            <!-- Actions buttons visible on larger screens -->
+                            <td class="d-none d-md-table-cell">
+                                <a class="btn btn-light btn-border btn-outline-dark btn-color fw-semibold"
+                                    href="{% url 'edit_booking' booking.id %}">
                                     <span>Edit</span>
                                 </a>
                             </td>
-                            <td>
-                                <a class="btn btn-light btn-border btn-outline-dark btn-color fw-semibold" href="{% url 'delete_booking' booking.id %}">
+                            <td class="d-none d-md-table-cell">
+                                <a class="btn btn-light btn-border btn-outline-dark btn-color fw-semibold"
+                                    href="{% url 'delete_booking' booking.id %}">
                                     <span>Delete</span>
                                 </a>
+                            </td>
+                            <!-- Actions dropdown for smaller screens -->
+                            <td class="dropdown d-md-none">
+                                <button
+                                    class="btn btn-light btn-border btn-outline-dark btn-color fw-semibold font-sz dropdown-toggle"
+                                    type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Actions
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <li><a class="dropdown-item" href="{% url 'edit_booking' booking.id %}">Edit</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="{% url 'delete_booking' booking.id %}">Delete</a>
+                                    </li>
+                                </ul>
                             </td>
                         </tr>
                     </tbody>
