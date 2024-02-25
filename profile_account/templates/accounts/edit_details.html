@@ -5,7 +5,7 @@
 {% load crispy_forms_tags %}
 
 <div class="bg-image">
-    <div class="container bg-white bg-opacity">
+    <div class="container bg-white bg-opacity p-5 position-container booking-form">
         <section>
             <h2>Edit account details</h2>
             <hr>
@@ -13,8 +13,8 @@
                 <form method="post">
                     {{ edit_form|crispy }}
                     {% csrf_token %}
-                    <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>
-                    <a href="{% url 'profile_account' %}"><span>Cancel</span></a>
+                    <button id="submitButton" type="submit" class="fs-6 fw-semibold btn btn-light btn-lg btn-border btn-outline-dark btn-color me-3">Submit</button>
+                    <a href="{% url 'profile_account' %}" class="fs-6 fw-semibold btn btn-light btn-lg btn-border btn-outline-dark btn-color"><span>Cancel</span></a>
                 </form>
             </div>
         </section>
