@@ -20,6 +20,21 @@ a {
     --bs-bg-opacity: 0.85;
 }
 
+.btn-outline-dark {
+    --bs-btn-hover-bg: rgba(176, 119, 63, 0.5);
+    --bs-btn-hover-color: #212529;
+    --bs-btn-active-color: #212529;
+    --bs-btn-active-bg: rgba(176, 119, 63, 0.5);
+}
+
+.dlt-btn {
+    background-color: rgba(206, 40, 10, 0.4);
+    --bs-btn-hover-bg: rgba(206, 40, 10, 0.6);
+    --bs-btn-hover-color: #212529;
+    --bs-btn-active-color: #212529;
+    --bs-btn-active-bg: rgba(206, 40, 10, 0.6);
+}
+
 /* Navigation bar */
 nav {
     /* background-color: #DFDFD9;*/
@@ -49,7 +64,7 @@ nav {
 }
 
 .alert-error {
-    background-color: rgba(206, 40, 10, 0.4);
+    background-color: rgba(206, 40, 10, 0.4) !important;
 }
 
 /* Landing page */

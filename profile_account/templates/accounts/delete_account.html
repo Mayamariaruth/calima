@@ -11,7 +11,7 @@
             <p class="fs-5">If you delete your account, you will lose all your requests and active bookings.</p>
             <form method="post">
                 {% csrf_token %}
-                <button id="submitButton" type="submit" class="fs-5 fw-semibold btn btn-light btn-lg btn-border btn-outline-dark btn-color me-3">Delete account</button>
+                <button id="submitButton" type="submit" class="fs-5 fw-semibold btn btn-lg btn-border btn-outline-dark me-3 dlt-btn">Delete account</button>
                 <a href="{% url 'profile_account' %}" class="fs-5 fw-semibold btn btn-light btn-lg btn-border btn-outline-dark btn-color"><span>Cancel</span></a>
             </form>
         </section>
