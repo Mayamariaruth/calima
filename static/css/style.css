@@ -1,5 +1,6 @@
 /* General styles */
-body, html {
+body,
+html {
     max-width: 2000px;
     padding-top: 48px;
     font-family: 'Playfair display', sans-serif;
@@ -12,7 +13,7 @@ a {
 .bg-image {
     background: url(../images/bg.jpg) no-repeat center center/cover;
     min-height: 100vh;
-    background-color: rgba(41,134,112, 0.8);
+    background-color: rgba(41, 134, 112, 0.8);
     overflow: auto;
 }
 
@@ -78,7 +79,8 @@ nav {
     font-size: 2.4rem;
     font-weight: 200;
     color: rgba(0, 0, 0, 0.6);
-    margin-top: 1rem;
+    margin-top: 3rem;
+    text-align: center;
 }
 
 #heading2 {
@@ -138,7 +140,7 @@ nav {
 
 /* Footer */
 footer {
-    background-color: rgba(126,187,165, 0.6);
+    background-color: rgba(126, 187, 165, 0.6);
 }
 
 .margin {
@@ -160,13 +162,14 @@ footer {
     color: black;
 }
 
+/* Media queries */
 @media (min-width: 576px) {
     #heading {
-        font-size: 3rem;
+        font-size: 2.6rem;
     }
 
     #heading2 {
-        font-size: 2rem;
+        font-size: 1.7rem;
     }
 
     .font-sz {
@@ -176,7 +179,7 @@ footer {
 
 @media (min-width: 768px) {
     #heading {
-        font-size: 3.5rem;
+        font-size: 3.4rem;
     }
 
     #heading2 {
@@ -186,18 +189,17 @@ footer {
     #row {
         gap: 5rem;
     }
-
 }
 
 @media (min-width: 992px) {
     nav {
-        background-color: rgba(126,187,165, 0.4);
+        background-color: rgba(126, 187, 165, 0.4);
     }
 
     #heading {
         font-size: 4rem;
     }
-    
+
     #heading2 {
         font-size: 2.5rem;
     }
