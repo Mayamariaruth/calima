@@ -19,14 +19,21 @@ def book_table(request):
         if form.is_valid():
             booking = form.save(commit=False)
             booking.user = request.user
-            
+
             if Booking.objects.filter(
                 user=booking.user,
                 date=booking.date,
                 time=booking.time,
             ).exists():
-                messages.error(request, 'You already have a booking with the same date and time.')
-                return render(request, 'booking/booking_form.html', {'form': form})
+                messages.error(
+                    request,
+                    'You already have a booking with the same date and time.'
+                )
+                return render(
+                    request,
+                    'booking/booking_form.html',
+                    {'form': form}
+                )
             else:
                 booking.save()
                 messages.success(request, 'Booking successful!')
