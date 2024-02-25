@@ -8,14 +8,18 @@
     <div class="container bg-white bg-opacity p-5" id="profile-container">
         <div class="row">
             <div class="col">
-                <h2 class="fs-1">My profile</h2>
+                <h2 class="fs-1">My Profile</h2>
                 <hr>
                 <p class="fs-6"><span class="fw-bold">First name:</span> {{ firstname }}</p>
                 <p class="fs-6"><span class="fw-bold">Last name:</span> {{ lastname }}</p>
                 <p class="fs-6"><span class="fw-bold">Username:</span> {{ username }}</p>
-                <p class="fs-6"><span class="fw-bold">Email:</span> {{ emailaddress }}</p>
-                <a href="{% url 'edit_details' %}" class="fs-6">Edit account details</a>
-                <a href="{% url 'delete_account' %}" class="fs-6">Delete account</a>
+                <p class="fs-6 mb-4"><span class="fw-bold">Email:</span> {{ emailaddress }}</p>
+                <a href="{% url 'edit_details' %}" class="fs-6 fw-semibold btn btn-light btn-lg btn-border btn-outline-dark btn-color me-2">
+                    <span>Edit account details</span>
+                </a>
+                <a href="{% url 'delete_account' %}" class="fs-6 fw-semibold btn btn-light btn-lg btn-border btn-outline-dark btn-color">
+                    <span>Delete account</span>
+                </a>
             </div>
             <div class="col">
                 <h2 class="fs-1">My Bookings</h2>
@@ -36,16 +40,16 @@
                         <tr>
                             <td>{{ booking.date }}</td>
                             <td>{{ booking.time }}</td>
-                            <td>{{ booking.number_of_people }}</td>
+                            <td class="text-center">{{ booking.number_of_people }}</td>
                             <td>{{ booking.status }}</td>
                             <td>
-                                <a href="{% url 'edit_booking' booking.id %}">
-                                    <button>Edit</button>
+                                <a class="btn btn-light btn-border btn-outline-dark btn-color fw-semibold" href="{% url 'edit_booking' booking.id %}">
+                                    <span>Edit</span>
                                 </a>
                             </td>
                             <td>
-                                <a href="{% url 'delete_booking' booking.id %}">
-                                    <button>Delete</button>
+                                <a class="btn btn-light btn-border btn-outline-dark btn-color fw-semibold" href="{% url 'delete_booking' booking.id %}">
+                                    <span>Delete</span>
                                 </a>
                             </td>
                         </tr>

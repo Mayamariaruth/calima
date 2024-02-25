@@ -50,7 +50,7 @@ nav {
     font-size: 4rem;
     font-weight: 200;
     color: rgba(0, 0, 0, 0.6);
-    margin-top: 5rem;
+    margin-top: 3rem;
 }
 
 #heading2 {
@@ -100,6 +100,10 @@ nav {
 
 .transparent {
     --bs-table-bg: transparent;
+}
+
+.btn-color {
+    background-color: rgba(176, 119, 63, 0.2);
 }
 
 /* Footer */
