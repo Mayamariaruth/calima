@@ -5,42 +5,48 @@
 {% load crispy_forms_tags %}
 
 <!-- Booking form -->
-<div>
-    <section>
-        <h2>{{ heading }}</h2>
-        <hr>
-        <div>
-            {% if user.is_authenticated %}
-            <form method="post">
-                {% csrf_token %}
-                {{ form|crispy }}
-                <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>
-            </form>
+<div class="bg-image">
+    <div class="container bg-white bg-opacity">
+        <section>
+            <h2>{{ heading }}</h2>
+            <hr>
             <div>
-                <h3>Booking Requirements:</h3>
-                <p>Contact Information: Provide your name and email address so we can confirm your booking and contact
-                    you if needed.</p>
-                <p>Booking Date and Time: Please select your preferred date and time for the reservation from the
-                    options.
-                    <span class="bold">Please note that we do not accept same-day bookings due to accommodating walk-in
-                        guests.</span>
-                </p>
-                <p>Guests: Specify the number of guests in your party. If you would like to book a table for more than 6
-                    people, please contact us at Info@Calima.com.</p>
-                <p>Special Requests: If you have any special requests or preferences (e.g., dietary restrictions,
-                    seating preferences), please let us know in the "Special Requests" section.</p>
-                <p>Confirmation: After submitting the form, you will be taken to your dashboard where you can see the
-                    status of your request. Please ensure the information is accurate.</p>
+                {% if user.is_authenticated %}
+                <form method="post">
+                    {% csrf_token %}
+                    {{ form|crispy }}
+                    <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>
+                </form>
+                <div>
+                    <h3>Booking Requirements:</h3>
+                    <p>Contact Information: Provide your name and email address so we can confirm your booking and
+                        contact
+                        you if needed.</p>
+                    <p>Booking Date and Time: Please select your preferred date and time for the reservation from the
+                        options.
+                        <span class="bold">Please note that we do not accept same-day bookings due to accommodating
+                            walk-in
+                            guests.</span>
+                    </p>
+                    <p>Guests: Specify the number of guests in your party. If you would like to book a table for more
+                        than 6
+                        people, please contact us at Info@Calima.com.</p>
+                    <p>Special Requests: If you have any special requests or preferences (e.g., dietary restrictions,
+                        seating preferences), please let us know in the "Special Requests" section.</p>
+                    <p>Confirmation: After submitting the form, you will be taken to your dashboard where you can see
+                        the
+                        status of your request. Please ensure the information is accurate.</p>
+                </div>
+                {% else %}
+                <div>
+                    <p>Please log in to book a table!</p>
+                    <a id="login-btn" class="nav-link {% if request.path == login_url %}active{% endif %}"
+                        aria-current="page" href="{% url 'account_login' %}">Login</a>
+                </div>
+                {% endif %}
             </div>
-            {% else %}
-            <div>
-                <p>Please log in to book a table!</p>
-                <a id="login-btn" class="nav-link {% if request.path == login_url %}active{% endif %}"
-                    aria-current="page" href="{% url 'account_login' %}">Login</a>
-            </div>
-            {% endif %}
-        </div>
-    </section>
+        </section>
+    </div>
 </div>
 
 {% endblock content %}

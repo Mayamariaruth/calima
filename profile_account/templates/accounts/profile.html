@@ -4,7 +4,8 @@
 {% load static %}
 
 {% if user.is_authenticated and not is_admin %}
-<div>
+<div class="bg-image">
+    <div class="container bg-white bg-opacity">
     <section>
         <h2>My profile</h2>
         <hr>
@@ -54,6 +55,7 @@
             {% endif %}
         </div>
     </section>
+</div>
 </div>
 {% endif %}
 {% endblock content %}

@@ -3,17 +3,19 @@
 {% block content %}
 {% load static %}
 
-<div>
-    <section>
-        <h2>Are you sure you want to delete your account?</h2>
-        <hr>
-        <p>If you delete your account, you will lose all your requests and active bookings.</p>
-        <form method="post">
-            {% csrf_token %}
-            <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Delete account</button>
-            <a href="{% url 'profile_account' %}"><span>Cancel</span></a>
-        </form>
-    </section>
+<div class="bg-image">
+    <div class="container bg-white bg-opacity">
+        <section>
+            <h2>Are you sure you want to delete your account?</h2>
+            <hr>
+            <p>If you delete your account, you will lose all your requests and active bookings.</p>
+            <form method="post">
+                {% csrf_token %}
+                <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Delete account</button>
+                <a href="{% url 'profile_account' %}"><span>Cancel</span></a>
+            </form>
+        </section>
+    </div>
 </div>
 
 {% endblock content %}

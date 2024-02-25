@@ -3,17 +3,20 @@
 {% block content %}
 {% load static %}
 
-<div>
-    <section>
-        <h2>Are you sure you want to delete this booking?</h2>
-        <hr>
-        <p>If you delete this booking, it will be permanently deleted from our system and you will not be able to access it again.</p>
-        <form method="post">
-            {% csrf_token %}
-            <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Delete</button>
-            <a href="{% url 'profile_account' %}">Cancel</a>
-        </form>
-    </section>
+<div class="bg-image">
+    <div class="container bg-white bg-opacity">
+        <section>
+            <h2>Are you sure you want to delete this booking?</h2>
+            <hr>
+            <p>If you delete this booking, it will be permanently deleted from our system and you will not be able to
+                access it again.</p>
+            <form method="post">
+                {% csrf_token %}
+                <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Delete</button>
+                <a href="{% url 'profile_account' %}">Cancel</a>
+            </form>
+        </section>
+    </div>
 </div>
 
 {% endblock content %}

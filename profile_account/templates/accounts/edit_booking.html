@@ -4,26 +4,28 @@
 {% load static %}
 {% load crispy_forms_tags %}
 
-<div>
-    <section>
-        <h2>Edit booking</h2>
-        <hr>
-        <form method="post">
-            {{ form|crispy }}
-            {% csrf_token %}
-            <button type="submit">Save changes</button>
-            <a href="{% url 'profile_account' %}">Cancel</a>
-        </form>
-        {% if form.errors %}
-        <ul>
-            {% for field in form %}
-            {% for error in field.errors %}
-            <li>{{ error }}</li>
-            {% endfor %}
-            {% endfor %}
-        </ul>
-        {% endif %}
-    </section>
+<div class="bg-image">
+    <div class="container bg-white bg-opacity">
+        <section>
+            <h2>Edit booking</h2>
+            <hr>
+            <form method="post">
+                {{ form|crispy }}
+                {% csrf_token %}
+                <button type="submit">Save changes</button>
+                <a href="{% url 'profile_account' %}">Cancel</a>
+            </form>
+            {% if form.errors %}
+            <ul>
+                {% for field in form %}
+                {% for error in field.errors %}
+                <li>{{ error }}</li>
+                {% endfor %}
+                {% endfor %}
+            </ul>
+            {% endif %}
+        </section>
+    </div>
 </div>
 
 {% endblock content %}
