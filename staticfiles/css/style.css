@@ -75,15 +75,15 @@ nav {
 
 #heading {
     font-family: 'Dancing script', sans-serif;
-    font-size: 4rem;
+    font-size: 2.4rem;
     font-weight: 200;
     color: rgba(0, 0, 0, 0.6);
-    margin-top: 3rem;
+    margin-top: 1rem;
 }
 
 #heading2 {
     font-family: 'Playfair display', sans-serif;
-    font-size: 2.5rem;
+    font-size: 1.6rem;
     font-weight: 100;
     display: flex;
     justify-content: center;
@@ -137,10 +137,6 @@ footer {
     background-color: rgba(126,187,165, 0.6);
 }
 
-#row {
-    gap: 5rem;
-}
-
 .margin {
     margin-top: 1rem;
     margin-bottom: 17px;
@@ -160,9 +156,93 @@ footer {
     color: black;
 }
 
+@media (min-width: 576px) {
+    #heading {
+        font-family: 'Dancing script', sans-serif;
+        font-size: 3rem;
+        font-weight: 200;
+        color: rgba(0, 0, 0, 0.6);
+        margin-top: 3rem;
+    }
+
+    #heading2 {
+        font-family: 'Playfair display', sans-serif;
+        font-size: 2rem;
+        font-weight: 100;
+        display: flex;
+        justify-content: center;
+        font-style: italic;
+    }
+}
+
+@media (min-width: 768px) {
+    #heading {
+        font-family: 'Dancing script', sans-serif;
+        font-size: 3.5rem;
+        font-weight: 200;
+        color: rgba(0, 0, 0, 0.6);
+        margin-top: 3rem;
+    }
+
+    #heading2 {
+        font-family: 'Playfair display', sans-serif;
+        font-size: 2.2rem;
+        font-weight: 100;
+        display: flex;
+        justify-content: center;
+        font-style: italic;
+    }
+
+    /* Footer */
+    footer {
+        background-color: rgba(126,187,165, 0.6);
+    }
+
+    #row {
+        gap: 5rem;
+    }
+
+    .margin {
+        margin-top: 1rem;
+        margin-bottom: 17px;
+    }
+
+    .footer-text {
+        font-size: 1.1rem;
+    }
+
+    #list-style {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .socials {
+        text-decoration: none;
+        color: black;
+    }
+}
+
 @media (min-width: 992px) {
     /* Navigation bar */
     nav {
         background-color: rgba(126,187,165, 0.4);
+    }
+
+    /* Landing page */
+    #heading {
+        font-family: 'Dancing script', sans-serif;
+        font-size: 4rem;
+        font-weight: 200;
+        color: rgba(0, 0, 0, 0.6);
+        margin-top: 3rem;
+    }
+    
+    #heading2 {
+        font-family: 'Playfair display', sans-serif;
+        font-size: 2.5rem;
+        font-weight: 100;
+        display: flex;
+        justify-content: center;
+        font-style: italic;
     }
 }
