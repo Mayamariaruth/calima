@@ -4,15 +4,15 @@
 {% load static %}
 
 <div class="bg-image">
-    <div class="container bg-white bg-opacity">
+    <div class="container bg-white bg-opacity p-5 position-container booking-form">
         <section>
             <h2>Are you sure you want to delete your account?</h2>
             <hr>
-            <p>If you delete your account, you will lose all your requests and active bookings.</p>
+            <p class="fs-5">If you delete your account, you will lose all your requests and active bookings.</p>
             <form method="post">
                 {% csrf_token %}
-                <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Delete account</button>
-                <a href="{% url 'profile_account' %}"><span>Cancel</span></a>
+                <button id="submitButton" type="submit" class="fs-5 fw-semibold btn btn-light btn-lg btn-border btn-outline-dark btn-color me-3">Delete account</button>
+                <a href="{% url 'profile_account' %}" class="fs-5 fw-semibold btn btn-light btn-lg btn-border btn-outline-dark btn-color"><span>Cancel</span></a>
             </form>
         </section>
     </div>
