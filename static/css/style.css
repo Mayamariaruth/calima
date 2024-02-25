@@ -9,6 +9,17 @@ a {
     text-decoration: none;
 }
 
+.bg-image {
+    background: url(../images/bg.jpg) no-repeat center center/cover;
+    min-height: 100vh;
+    background-color: rgba(41,134,112, 0.8);
+    overflow: auto;
+}
+
+.bg-opacity {
+    --bs-bg-opacity: 0.85;
+}
+
 /* Navigation bar */
 nav {
     /* background-color: #DFDFD9;*/
@@ -37,14 +48,13 @@ nav {
     --bs-alert-bg: #D1BF9C;
 }
 
-/* Hero */
+/* Landing page */
 .hero-image {
     background: url(../images/hero.jpg) no-repeat center center/cover;
     height: 100vh;
     background-color: #298670;
 }
 
-/* Landing page */
 #heading {
     font-family: 'Dancing script', sans-serif;
     font-size: 4rem;
@@ -81,19 +91,8 @@ nav {
     padding: 1rem;
 }
 
-/* Background image */
-.bg-image {
-    background: url(../images/bg.jpg) no-repeat center center/cover;
-    height: 100vh;
-    background-color: rgba(41,134,112, 0.8);
-}
-
-.bg-opacity {
-    --bs-bg-opacity: 0.85;
-}
-
 /* Profile */
-#profile-container {
+.position-container {
     position: relative;
     top: 4rem;
 }
@@ -104,6 +103,15 @@ nav {
 
 .btn-color {
     background-color: rgba(176, 119, 63, 0.2);
+}
+
+/* Booking form */
+.booking-form {
+    margin-bottom: 130px;
+}
+
+.font-weight {
+    font-weight: 700;
 }
 
 /* Footer */
