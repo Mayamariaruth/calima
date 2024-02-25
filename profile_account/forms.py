@@ -18,6 +18,9 @@ class EditForm(forms.ModelForm):
         }
 
     def clean(self):
+        """
+        Validating that the username or email is not already in use
+        """
         cleaned_data = super().clean()
         username = self.cleaned_data.get('username')
         email = self.cleaned_data.get('email')

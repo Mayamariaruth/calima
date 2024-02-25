@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 
 {% block content %}
-{% load static %}
 
+<!-- Account details section -->
 {% if user.is_authenticated and not is_admin %}
 <div class="bg-image">
     <div class="container bg-white bg-opacity p-5 position-container">
@@ -23,6 +23,7 @@
                     <span>Delete account</span>
                 </a>
             </div>
+            <!-- My bookings section -->
             <div class="col">
                 <h2 class="fs-1">My Bookings</h2>
                 <hr>
@@ -86,5 +87,6 @@
         </div>
     </div>
 </div>
+
 {% endif %}
 {% endblock content %}

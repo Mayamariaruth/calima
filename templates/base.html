@@ -12,29 +12,23 @@
     <meta name="keywords"
         content="Calima, Caribbean, food, Restaurant, dining, Berawa, Bali, cuisine, tropical, flavors, authentic, atmosphere">
     <title>Calima</title>
-
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Noto+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,900;1,400;1,500;1,600;1,900&family=Protest+Riot&display=swap"
         rel="stylesheet">
-
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon/apple-touch-icon.png' %}">
     <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon/favicon-32x32.png' %}">
     <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon/favicon-16x16.png' %}">
-
     <!-- Font Awesome icons -->
     <script src="https://kit.fontawesome.com/11ca27fbbb.js" crossorigin="anonymous"></script>
-
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-
 </head>
 
 <body>
@@ -96,7 +90,7 @@
             </div>
         </div>
     </nav>
-    <!-- Messages -->
+    <!-- Messages alerts -->
     {% for message in messages %}
     <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %} alert-dismissible fade show" id="msg"
         role="alert">
@@ -138,6 +132,7 @@
                         <span class="fw-bold">Email:</span> info@calima.com<br>
                         <span class="fw-bold">Telephone:</span> +62 878 4274 7664<br>
                     </p>
+                    <!-- Socials -->
                     <div>
                         <ul class="d-flex list-group-horizontal justify-content-evenly" id="list-style">
                             <li>
@@ -170,7 +165,6 @@
             </div>
         </div>
     </footer>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>

@@ -48,4 +48,7 @@ def book_table(request):
 
 
 def booking_success(request):
+    """
+    Renders booking_success template after successful booking request
+    """
     return render(request, 'booking/booking_success.html')

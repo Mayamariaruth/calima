@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 
 {% block content %}
-{% load static %}
 {% load crispy_forms_tags %}
 
 <!-- Booking form -->
@@ -16,30 +15,37 @@
                     <form method="post">
                         {% csrf_token %}
                         {{ form|crispy }}
-                        <button type="submit" class="btn btn-signup btn-lg btn-border btn-outline-dark mb-4 btn-color">Submit</button>
+                        <button type="submit"
+                            class="btn btn-signup btn-lg btn-border btn-outline-dark mb-4 btn-color">Submit</button>
                     </form>
                 </div>
             </div>
+            <!-- Booking requirements -->
             <div class="col-6">
                 <h3 class="fs-2 mt-2 mb-4">Booking Requirements:</h3>
-                <p class="mb-4"><span class="font-weight">Contact Information:</span> Provide your name and email address so we can confirm your booking and
+                <p class="mb-4"><span class="font-weight">Contact Information:</span> Provide your name and email
+                    address so we can confirm your booking and
                     contact
                     you if needed.</p>
-                <p class="mb-4"><span class="font-weight">Booking Date and Time:</span> Please select your preferred date and time for the reservation from
+                <p class="mb-4"><span class="font-weight">Booking Date and Time:</span> Please select your preferred
+                    date and time for the reservation from
                     the
                     options.
                     <span class="fw-semibold">Please note that we do not accept same-day bookings due to accommodating
                         walk-in
                         guests.</span>
                 </p>
-                <p class="mb-4"><span class="font-weight">Guests:</span> Specify the number of guests in your party. If you would like to book a table for
+                <p class="mb-4"><span class="font-weight">Guests:</span> Specify the number of guests in your party. If
+                    you would like to book a table for
                     more
                     than 6
                     people, please contact us at Info@Calima.com.</p>
-                <p class="mb-4"><span class="font-weight">Special Requests:</span> If you have any special requests or preferences (e.g., dietary
+                <p class="mb-4"><span class="font-weight">Special Requests:</span> If you have any special requests or
+                    preferences (e.g., dietary
                     restrictions,
                     seating preferences), please let us know in the "Special Requests" section.</p>
-                <p><span class="font-weight">Confirmation:</span> After submitting the form, you will be taken to your dashboard where you can
+                <p><span class="font-weight">Confirmation:</span> After submitting the form, you will be taken to your
+                    dashboard where you can
                     see
                     the
                     status of your request. Please ensure the information is accurate.</p>

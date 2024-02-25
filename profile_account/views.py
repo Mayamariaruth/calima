@@ -4,8 +4,12 @@ from django.contrib import messages
 from .forms import EditForm, EditBookingForm
 from booking.models import Booking
 
+
 # Create your views here.
 def profile_account(request):
+    """
+    Renders user profile template with user bookings and details
+    """
     if request.user.is_authenticated:
         firstname = request.user.first_name
         lastname = request.user.last_name
@@ -14,7 +18,7 @@ def profile_account(request):
 
         user_bookings = Booking.objects.filter(
             user=request.user).order_by('date', 'time')
-        
+
         print(user_bookings)
 
         context = {
@@ -35,7 +39,10 @@ def delete_account(request):
     if request.method == 'POST':
         user = request.user
         user.delete()
-        messages.success(request, 'Your account has been deleted successfully.')
+        messages.success(
+            request,
+            'Your account has been deleted successfully.'
+        )
         return redirect('home')
     else:
         return render(request, 'accounts/delete_account.html')
@@ -86,14 +93,14 @@ def update_bookings(user):
 @login_required
 def edit_booking(request, booking_id):
     """
-    Edit specific user booking.
+    Edit specific user booking
     Validating that the booking doesn't already exist
     """
     booking = get_object_or_404(Booking, id=booking_id)
 
     if request.method == 'POST':
         form = EditBookingForm(request.POST, instance=booking)
-        
+
         if form.is_valid():
             edited_booking = form.save(commit=False)
             existing_booking = Booking.objects.filter(
@@ -101,13 +108,23 @@ def edit_booking(request, booking_id):
                 date=edited_booking.date,
                 time=edited_booking.time
             ).exclude(id=booking_id).first()
-            
+
             if existing_booking:
-                messages.error(request, 'You already have a booking with the same date and time.')
-                return render(request, 'accounts/edit_booking.html', {'form': form})
-            
+                messages.error(
+                    request,
+                    'You already have a booking with the same date and time.'
+                )
+                return render(
+                    request,
+                    'accounts/edit_booking.html',
+                    {'form': form}
+                )
+
             edited_booking.save()
-            messages.success(request, 'Your booking has been updated successfully!')
+            messages.success(
+                request,
+                'Your booking has been updated successfully!'
+            )
             return redirect('profile_account')
     else:
         form = EditBookingForm(instance=booking)
@@ -123,9 +140,17 @@ def delete_booking(request, booking_id):
     booking = get_object_or_404(Booking, id=booking_id)
 
     if request.method == 'POST':
-        user = request.user
-        booking.delete()
-        messages.success(request, 'Your booking has been deleted successfully.')
+        if booking.user == request.user:
+            booking.delete()
+            messages.success(
+                request,
+                'Your booking has been deleted successfully.'
+            )
+        else:
+            messages.error(
+                request,
+                'You are not authorized to delete this booking.'
+            )
         return redirect('profile_account')
     else:
         return render(request, 'accounts/delete_booking.html')

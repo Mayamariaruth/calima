@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 
 {% block content %}
-{% load static %}
 {% load crispy_forms_tags %}
 
 <div class="bg-image">
@@ -12,9 +11,13 @@
             <form method="post">
                 {{ form|crispy }}
                 {% csrf_token %}
-                <button type="submit" class="fs-6 fw-semibold btn btn-light btn-lg btn-border btn-outline-dark btn-color me-3">Save changes</button>
-                <a href="{% url 'profile_account' %}" class="fs-6 fw-semibold btn btn-light btn-lg btn-border btn-outline-dark btn-color"><span>Cancel</span></a>
+                <button type="submit"
+                    class="fs-6 fw-semibold btn btn-light btn-lg btn-border btn-outline-dark btn-color me-3">Save
+                    changes</button>
+                <a href="{% url 'profile_account' %}"
+                    class="fs-6 fw-semibold btn btn-light btn-lg btn-border btn-outline-dark btn-color"><span>Cancel</span></a>
             </form>
+            <!-- Display error messages under each field -->
             {% if form.errors %}
             <ul>
                 {% for field in form %}

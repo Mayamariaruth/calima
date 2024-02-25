@@ -1,7 +1,7 @@
 import datetime
-from .models import Booking, available_times
 from django.core.exceptions import ValidationError
 from django import forms
+from .models import Booking, available_times
 
 
 # Create your forms here.
