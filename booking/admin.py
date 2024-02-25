@@ -7,7 +7,7 @@ from allauth.socialaccount.models import SocialToken, SocialAccount, SocialApp
 @admin.register(Booking)
 class AdminBooking(admin.ModelAdmin):
     """
-    Display bookings in admin panel
+    Display booking fields in admin panel
     """
     list_display = (
         'status', 'first_name', 'last_name',
