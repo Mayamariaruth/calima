@@ -5,57 +5,61 @@
 
 {% if user.is_authenticated and not is_admin %}
 <div class="bg-image">
-    <div class="container bg-white bg-opacity">
-    <section>
-        <h2>My profile</h2>
-        <hr>
-        <h3>Account details</h3>
-        <p><span>First name:</span> {{ firstname }}</p>
-        <p><span>Last name:</span>{{ lastname }}</p>
-        <p><span>Username:</span> {{ username }}</p>
-        <p><span>Email:</span> {{ emailaddress }}</p>
-        <a href="{% url 'edit_details' %}">Edit account details</a>
-        <a href="{% url 'delete_account' %}">Delete account</a>
-
-        <div>
-            <h2>My Bookings</h2>
-            <hr>
-            {% if user_bookings %}
-            {% for booking in user_bookings %}
-            <table>
-                <tr>
-                    <th>Date</th>
-                    <th>Time</th>
-                    <th>Guests</th>
-                    <th>Status</th>
-                    <th>Actions</th>
-                </tr>
-                <tr>
-                    <td>{{ booking.date }}</td>
-                    <td>{{ booking.time }}</td>
-                    <td>{{ booking.number_of_people }}</td>
-                    <td>{{ booking.status }}</td>
-                    <td>
-                        <a href="{% url 'edit_booking' booking.id %}">
-                            <button>Edit</button>
-                        </a>
-                    </td>
-                    <td>
-                        <a href="{% url 'delete_booking' booking.id %}">
-                            <button>Delete</button>
-                        </a>
-                    </td>
-                </tr>
-            </table>
-            {% endfor %}
-            {% else %}
-            <div>
-                <p>There are no active bookings or requests for this account.</p>
+    <div class="container bg-white bg-opacity p-5" id="profile-container">
+        <div class="row">
+            <div class="col">
+                <h2 class="fs-1">My profile</h2>
+                <hr>
+                <p class="fs-6"><span class="fw-bold">First name:</span> {{ firstname }}</p>
+                <p class="fs-6"><span class="fw-bold">Last name:</span> {{ lastname }}</p>
+                <p class="fs-6"><span class="fw-bold">Username:</span> {{ username }}</p>
+                <p class="fs-6"><span class="fw-bold">Email:</span> {{ emailaddress }}</p>
+                <a href="{% url 'edit_details' %}" class="fs-6">Edit account details</a>
+                <a href="{% url 'delete_account' %}" class="fs-6">Delete account</a>
             </div>
-            {% endif %}
+            <div class="col">
+                <h2 class="fs-1">My Bookings</h2>
+                <hr>
+                {% if user_bookings %}
+                {% for booking in user_bookings %}
+                <table class="fs-6 table table-borderless transparent">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Time</th>
+                            <th>Guests</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>{{ booking.date }}</td>
+                            <td>{{ booking.time }}</td>
+                            <td>{{ booking.number_of_people }}</td>
+                            <td>{{ booking.status }}</td>
+                            <td>
+                                <a href="{% url 'edit_booking' booking.id %}">
+                                    <button>Edit</button>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="{% url 'delete_booking' booking.id %}">
+                                    <button>Delete</button>
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                {% endfor %}
+                {% else %}
+                <div>
+                    <p>There are no active bookings or requests for this account.</p>
+                </div>
+                {% endif %}
+            </div>
         </div>
-    </section>
-</div>
+    </div>
 </div>
 {% endif %}
 {% endblock content %}

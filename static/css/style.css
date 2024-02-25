@@ -92,6 +92,16 @@ nav {
     --bs-bg-opacity: 0.85;
 }
 
+/* Profile */
+#profile-container {
+    position: relative;
+    top: 4rem;
+}
+
+.transparent {
+    --bs-table-bg: transparent;
+}
+
 /* Footer */
 footer {
     background-color: rgba(126,187,165, 0.6);
