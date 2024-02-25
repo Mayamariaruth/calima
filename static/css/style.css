@@ -60,7 +60,7 @@ nav {
 }
 
 .alert-success {
-    --bs-alert-bg: rgba(176, 119, 63, 0.4);
+    --bs-alert-bg: rgba(144, 198, 149);
 }
 
 .alert-error {
