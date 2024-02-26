@@ -8,9 +8,7 @@ Our site aims to bring the vibrant flavors and rich culinary traditions to your 
 
 Link to the live site here - [Calima](https://calima-665aec414d74.herokuapp.com/)
 
-![Responsive Mockup]()
-
-![Responsive Mockup]()
+![Responsive Mockup](docs/images/amiresp.png)
 
 ## Table of Contents:
 1. [**Introduction**](#introduction)
@@ -244,7 +242,7 @@ The website should reflect the ambiance of Calima and through high-quality visua
 
 ### Scope
 
-The following is a prioritized list outlining the scope of the project. These priorities were determined considering the project's limited time frame and the key features essential for its aim.
+The following is a prioritized list outlining the scope of the project. These priorities were determined considering the project's limited time frame and the key features essential for its aim (MVP).
 
 #### 1. Book Table form
 
@@ -285,7 +283,34 @@ The following is a prioritized list outlining the scope of the project. These pr
 
 ### Wireframes
 
+All pages on the site, with the exception of the landing page, feature a consistent design style, characterized by a shared background image and a clean white text box containing the content. 
+As a result, I'm only displaying the critical pages below. Despite minor differences, the overall appearance turned out pretty identical.
 
+- **Landing page**
+---
+![Landing page desktop](docs/wireframes/land-desk.png)
+![Landing page ipad](docs/wireframes/land-ipad.png)
+![Landing page mobile](docs/wireframes/land-mob.png)
+
+
+- **Booking form**
+---
+![Booking form desktop](docs/wireframes/form-desk.png)
+![Booking form ipad](docs/wireframes/form-ipad.png)
+![Booking form mobile](docs/wireframes/form-mob.png)
+
+- **Profile**
+---
+![Profile desktop](docs/wireframes/prof-desk.png)
+![Profile ipad](docs/wireframes/prof-ipad.png)
+![Profile mobile](docs/wireframes/prof-mob.png)
+
+
+- **Menu**
+---
+![Menu desktop](docs/wireframes/menu-desk.png)
+![Menu ipad](docs/wireframes/menu-ipad.png)
+![Menu mobile](docs/wireframes/menu-mob.png)
 
 
 ### Database schema
@@ -303,7 +328,7 @@ I generated the colors from the hero image on [Coolors](https://coolors.co/).
 
 I utilized the Contrast grid by Eightshapes to test my color combos so the colors complied with the highest accessibility.
 
-![Color]()
+![Color](docs/images/eightshapes.png)
 
 ### Typography
 I used three different fonts across the page:
