@@ -13,6 +13,12 @@ I manually tested this site in multiple ways highlighted below:
 * I tested the site for cross-compatibility in the two most used browsers, Chrome and Safari.
 * I used DevTools to easily move between different screen sizes, simulating sizes between 370px to 4000px (but it is also functional on even larger screens given the max-width setting on the Body element to keep the content compact instead of stretched).
 
+
+expected -
+testing -
+result - 
+fix -
+
 ### Validator Testing 
 I tested all the pages in the validators to make sure they all passed.
 - HTML
@@ -55,3 +61,10 @@ The evaluation is free from errors and below is taken from the Home page and qui
 
 #### Wave quiz page
 ![Wave evaluation](docs/screenshots/wave-quiz.png)
+
+### Bugs
+
+- 
+
+#### Unfixed Bugs
+- When too many bookings on profile, there is no space between white box and footer (but the actual content is still visible) but I decided not to fix that since staff would be clearing all bookings weekly from the system that are not necessary and we dont expect users to have that many bookings 
