@@ -19,6 +19,122 @@ testing -
 result - 
 fix -
 
+### User stories
+As a site user I can navigate the site content from the landing page so that I can access all the content easily and find what I'm looking for
+
+- Acceptance Criteria
+    * Have a navigation bar with links to the different pages
+
+    * Have separate sections for each page on the landing page
+
+    * Have buttons in each section to access the different pages
+
+
+As a site user I can register an account so that I can make a table booking
+
+- Acceptance Criteria
+    * Have a page for users to register an account
+
+    * They use their details to register
+
+    * Details are authenticated
+
+
+As a site user/admin I can log in and logout out of my account so that I can access the booking system
+
+- Acceptance Criteria
+    * Have a login page
+
+    * They enter their login details
+
+    * Login details are authenticated
+
+    * They are taken to their account profile and can access the booking form
+
+
+As a admin user I can log in to an admin account so that I can confirm/cancel requests and see all current/previous bookings
+
+- Acceptance Criteria
+    * Have an admin log in with an admin panel
+
+    * See all booking requests, confirmed bookings and cancelled bookings
+
+    * Ability to filter all bookings based on status and date
+
+
+As a site user I can access my account so that I can edit my details or delete my account
+
+- Acceptance Criteria
+    * Have a profile dashboard
+
+    * See my account details
+
+    * Edit my account details
+
+    * Delete my account
+
+
+As a site user I can send a booking request with all my details so that I can book a table with all the necessary details
+
+- Acceptance Criteria
+    * Booking request form includes my personal details, time, date and guest options
+
+    * Form is prepopulated with my account details
+
+    * Special request section
+
+
+As a site user I can book a table based on the requirements so that I properly book a table and have a high chance of having it approved
+
+- Acceptance Criteria 
+
+    * There is enough information on the page so I understand the form requirements
+
+    * I get an error if I've chosen an incorrect date, time or guest amount
+
+    * I get an error if I've already made an identical booking
+
+
+As a site user I can edit/cancel my booking requests so that I can customize my requests and have control over my bookings
+
+- Acceptance Criteria
+    * See all my requests on my profile
+
+    * Edit the requests
+
+    * Cancel the requests
+
+
+As a admin user I can access each booking so that I can cancel/confirm the requests and see special requests/contact details for the user
+
+- Acceptance Criteria
+    * Admin access to every booking
+
+    * Cancel/confirm requests
+
+    * Ability to see all customer details and booking request details in each booking
+
+
+As a site user I can access the menu for the restaurant so that I can see what food they have
+
+- Acceptance Criteria
+    * Link to the menu from the landing page and navigation bar
+
+    * A page with all menu items and prices
+
+    * Clear headings and descriptive names of each menu item
+
+
+As a site user/admin I can receive confirmations on my actions on the site so that I know the actions have been fulfilled
+
+- Acceptance Criteria
+    * Confirmation when I've sent a booking request
+
+    * Confirmation when I've edited/deleted my account
+
+    * Confirmation when I've edited/deleted my requests
+
+
 ### Validator Testing 
 I tested all the pages in the validators to make sure they all passed.
 - HTML
