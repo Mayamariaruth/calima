@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from .forms import BookingForm
@@ -37,7 +37,10 @@ def book_table(request):
             else:
                 booking.save()
                 messages.success(request, 'Booking successful!')
-                return render(request, 'booking/booking_success.html')
+                if request.user.is_authenticated and request.user.is_staff:
+                    return redirect('admin:index')
+                else:
+                    return render(request, 'booking/booking_success.html')
         else:
             return render(request, 'booking/booking_form.html', {'form': form})
     else:
