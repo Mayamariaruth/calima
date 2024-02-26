@@ -184,7 +184,7 @@ To deploy the site to Heroku, I went through below steps:
 - Give your app a name (every name has to be unique on Heroku so it's ok if you can't name your project the same as on GitHub).
 - Choose your region (USA or Europe) and click "Create app".
 - You're then taken to the dashboard of your app where you have a navigation bar. Click on the Settings tab and scroll down to "Config Vars".
-- Click "Reveal Config Vars" and input any necessary Config Vars (such as your database URL).
+- Click "Reveal Config Vars" and input any necessary environment variables (such as your database URL or secret key).
 - Go back to the navigation bar and select "Deploy".
 - Scroll down to the "Connect to GitHub" section and click on the Connect button.
 - After allowing Heroku access to GitHub, the "Connect to GitHub" section will allow you to search for the repository you wish to connect.
