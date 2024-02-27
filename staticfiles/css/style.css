@@ -63,10 +63,6 @@ nav {
     --bs-alert-bg: rgba(144, 198, 149);
 }
 
-.alert-error {
-    background-color: rgba(206, 40, 10, 0.4) !important;
-}
-
 /* Landing page */
 .hero-image {
     background: url(../images/hero-image.jpeg) no-repeat center center/cover;

@@ -1,6 +1,7 @@
 from pathlib import Path
 import dj_database_url
 import os
+from django.contrib.messages import constants as messages
 if os.path.isfile('env.py'):
     import env
 
@@ -118,6 +119,11 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
+
+MESSAGE_TAGS = {
+    messages.SUCCESS: 'success',
+    messages.ERROR: 'danger',
+}
 
 
 # Static files (CSS, JavaScript, Images)

@@ -14,126 +14,247 @@ I manually tested this site in multiple ways highlighted below:
 * I used DevTools to easily move between different screen sizes, simulating sizes between 370px to 4000px (but it is also functional on even larger screens given the max-width setting on the Body element to keep the content compact instead of stretched).
 
 
-expected -
-testing -
-result - 
-fix -
+Expected -
+Testing -
+Result - 
+Fix -
 
 ### User stories
-As a site user I can navigate the site content from the landing page so that I can access all the content easily and find what I'm looking for
+User Story: As a site user, I can navigate the site content from the landing page so that I can access all the content easily and find what I'm looking for.
 
-- Acceptance Criteria
-    * Have a navigation bar with links to the different pages
+Expected:
 
-    * Have separate sections for each page on the landing page
+The landing page should include a navigation bar with links to different pages.
+Each section on the landing page should have buttons to access the corresponding pages.
+Testing:
 
-    * Have buttons in each section to access the different pages
+Visit the landing page.
+Look for a navigation bar at the top of the page.
+Check that the navigation bar contains links to all necessary pages (e.g., Home, Menu, Book, Register, Login).
+Verify that each section on the landing page includes buttons or links to access the relevant pages.
+Result:
+The landing page includes a navigation bar with links and buttons to access all site content.
 
+Fix:
+N/A
 
-As a site user I can register an account so that I can make a table booking
+User Story: As a site user, I can register an account so that I can make a table booking.
 
-- Acceptance Criteria
-    * Have a page for users to register an account
+Expected:
 
-    * They use their details to register
+There should be a page for users to register an account.
+Users should be able to enter their details and have them authenticated.
+Testing:
 
-    * Details are authenticated
+Navigate to the registration page.
+Fill out the registration form with valid details.
+Submit the form.
+Check that the system registers the user and authenticates their details.
+Result:
+Users can successfully register accounts, and their details are authenticated.
 
+Fix:
+N/A
 
-As a site user/admin I can log in and logout out of my account so that I can access the booking system
+User Story: As a site user/admin, I can log in and log out of my account so that I can access the booking system.
 
-- Acceptance Criteria
-    * Have a login page
+Expected:
 
-    * They enter their login details
+There should be a login page where users/admins can enter their credentials.
+Upon successful authentication, users/admins should be directed to their account profile.
+Users/admins should be able to log out from their accounts.
+Testing:
 
-    * Login details are authenticated
+Visit the login page.
+Enter valid login credentials.
+Submit the login form.
+Verify that the system authenticates the user/admin.
+Check that the user/admin is redirected to their account profile.
+Log out from the account.
+Verify that the user/admin is logged out and redirected to the login page.
+Result:
+Users/admins can successfully log in and out of their accounts, and authentication is functioning correctly.
 
-    * They are taken to their account profile and can access the booking form
+Fix:
+N/A
 
+User Story: As an admin user, I can log in to an admin account so that I can confirm/cancel requests and see all current/previous bookings.
 
-As a admin user I can log in to an admin account so that I can confirm/cancel requests and see all current/previous bookings
+Expected:
 
-- Acceptance Criteria
-    * Have an admin log in with an admin panel
+There should be a separate admin login page with access to an admin panel.
+Admins should be able to view all booking requests, confirmed bookings, and canceled bookings.
+Admins should have the ability to filter bookings based on status and date.
+Testing:
 
-    * See all booking requests, confirmed bookings and cancelled bookings
+Visit the admin login page.
+Enter valid admin login credentials.
+Submit the login form.
+Check that the admin is redirected to the admin panel/dashboard.
+Navigate to the booking management section.
+Verify that all booking requests, confirmed bookings, and canceled bookings are displayed.
+Test the filtering functionality by filtering bookings based on status and date.
+Result:
+Admins can successfully log in to the admin account, access the admin panel, view bookings, and use the filtering functionality.
 
-    * Ability to filter all bookings based on status and date
+Fix:
+N/A
 
+User Story: As a site user, I can access my account so that I can edit my details or delete my account.
 
-As a site user I can access my account so that I can edit my details or delete my account
+Expected:
 
-- Acceptance Criteria
-    * Have a profile dashboard
+There should be a profile dashboard accessible to logged-in users.
+Users should be able to view their account details.
+Users should have the option to edit their account details.
+Users should have the option to delete their account.
+Testing:
 
-    * See my account details
+Log in to the user account.
+Navigate to the profile/dashboard page.
+Verify that the user's account details are displayed.
+Test the edit functionality by modifying account details.
+Verify that changes are saved successfully.
+Test the delete account functionality.
+Confirm that the user account is deleted.
+Result:
+Users can successfully access their account, view, edit, and delete account details.
 
-    * Edit my account details
+Fix:
+N/A
 
-    * Delete my account
+User Story: As a site user, I can send a booking request with all my details so that I can book a table with all the necessary details.
 
+Expected:
 
-As a site user I can send a booking request with all my details so that I can book a table with all the necessary details
+There should be a booking request form accessible to logged-in users.
+The booking request form should include fields for personal details, time, date, and guest options.
+The form should be prepopulated with the user's account details.
+There should be a section for special requests.
+Testing:
 
-- Acceptance Criteria
-    * Booking request form includes my personal details, time, date and guest options
+Log in to the user account.
+Navigate to the booking request form.
+Verify that the form includes fields for personal details, time, date, and guest options.
+Check that the form is prepopulated with the user's account details.
+Test the special request section by adding a special request.
+Submit the booking request form.
+Result:
+Users can successfully send a booking request with all necessary details, including personal information and special requests.
 
-    * Form is prepopulated with my account details
+Fix:
+N/A
 
-    * Special request section
+User Story: As a site user, I can book a table based on the requirements so that I properly book a table and have a high chance of having it approved.
 
+Expected:
 
-As a site user I can book a table based on the requirements so that I properly book a table and have a high chance of having it approved
+The booking page should provide sufficient information on form requirements.
+Users should receive an error message if they choose an incorrect date, time, or guest amount.
+Users should receive an error message if they attempt to make an identical booking.
+Testing:
 
-- Acceptance Criteria 
+Navigate to the booking page.
+Verify that there is clear information about the form requirements.
+Test the form by selecting an incorrect date, time, or guest amount.
+Confirm that an error message is displayed.
+Attempt to make a booking identical to an existing one.
+Confirm that an error message is displayed.
+Result:
+Users can successfully book a table based on requirements and receive appropriate error messages for incorrect selections.
 
-    * There is enough information on the page so I understand the form requirements
+Fix:
 
-    * I get an error if I've chosen an incorrect date, time or guest amount
+User Story: As a site user, I can edit/cancel my booking requests so that I can customize my requests and have control over my bookings.
 
-    * I get an error if I've already made an identical booking
+Expected:
 
+Users should be able to view all their booking requests on their profile/dashboard.
+Users should have the option to edit their booking requests.
+Users should have the option to cancel their booking requests.
+Testing:
 
-As a site user I can edit/cancel my booking requests so that I can customize my requests and have control over my bookings
+Log in to the user account.
+Navigate to the profile/dashboard page.
+Verify that all booking requests are displayed.
+Test the edit functionality by modifying a booking request.
+Confirm that changes are saved successfully.
+Test the cancel functionality by canceling a booking request.
+Confirm that the booking request is successfully canceled.
+Result:
+Users can successfully edit and cancel their booking requests, providing them with control over their bookings.
 
-- Acceptance Criteria
-    * See all my requests on my profile
+Fix:
+N/A
 
-    * Edit the requests
+User Story: As an admin user, I can access each booking so that I can cancel/confirm the requests and see special requests/contact details for the user.
 
-    * Cancel the requests
+Expected:
 
+Admin users should have access to every booking.
+Admin users should be able to cancel or confirm booking requests.
+Admin users should be able to view all customer details and booking request details for each booking.
+Testing:
 
-As a admin user I can access each booking so that I can cancel/confirm the requests and see special requests/contact details for the user
+Log in to the admin account.
+Navigate to the admin panel or booking management section.
+Verify that all booking requests are listed.
+Test the cancel functionality by canceling a booking request.
+Confirm that the booking request is successfully canceled.
+Test the confirm functionality by confirming a booking request.
+Confirm that the booking request is successfully confirmed.
+Select a booking request and verify that all customer details and booking request details are visible.
+Result:
+Admin users can successfully access, cancel, and confirm booking requests, and view all relevant details for each booking.
 
-- Acceptance Criteria
-    * Admin access to every booking
+Fix:
+Ensure that all booking details are properly displayed and actions such as canceling and confirming are functioning correctly.
 
-    * Cancel/confirm requests
+User Story: As a site user, I can access the menu for the restaurant so that I can see what food they have.
 
-    * Ability to see all customer details and booking request details in each booking
+Expected:
 
+There should be a link to the menu from the landing page and navigation bar.
+A page with all menu items and prices should be available.
+Clear headings and descriptive names of each menu item should be provided.
+Testing:
 
-As a site user I can access the menu for the restaurant so that I can see what food they have
+Navigate to the landing page.
+Look for a link to the menu in the navigation bar.
+Click on the menu link and verify that it directs to the menu page.
+On the menu page, verify that all menu items and prices are displayed.
+Check that each menu item has a clear heading and descriptive name.
+Result:
+Users can successfully access the restaurant menu and view all menu items with clear descriptions and prices.
 
-- Acceptance Criteria
-    * Link to the menu from the landing page and navigation bar
+Fix:
+Ensure that the menu link is easily accessible and that all menu items are accurately listed with clear descriptions.
 
-    * A page with all menu items and prices
+User Story: As a site user/admin, I can receive confirmations on my actions on the site so that I know the actions have been fulfilled.
 
-    * Clear headings and descriptive names of each menu item
+Expected:
 
+Users should receive confirmation when they send a booking request.
+Users should receive confirmation when they edit or delete their account.
+Users should receive confirmation when they edit or delete their booking requests.
+Testing:
 
-As a site user/admin I can receive confirmations on my actions on the site so that I know the actions have been fulfilled
+Send a booking request.
+After sending the booking request, verify that a confirmation message is displayed.
+Edit your account details.
+After editing the account details, verify that a confirmation message is displayed.
+Delete your account.
+After deleting the account, verify that a confirmation message is displayed.
+Edit one of your booking requests.
+After editing the booking request, verify that a confirmation message is displayed.
+Delete one of your booking requests.
+After deleting the booking request, verify that a confirmation message is displayed.
 
-- Acceptance Criteria
-    * Confirmation when I've sent a booking request
+Result:
+Users/admins receive confirmation messages for various actions such as sending booking requests, editing/deleting accounts, and editing/deleting booking requests.
 
-    * Confirmation when I've edited/deleted my account
-
-    * Confirmation when I've edited/deleted my requests
-
+Fix:
+Ensure that confirmation messages are displayed consistently and accurately for all relevant actions on the site.
 
 ### Validator Testing 
 I tested all the pages in the validators to make sure they all passed.

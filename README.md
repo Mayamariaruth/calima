@@ -283,8 +283,8 @@ The following is a prioritized list outlining the scope of the project. These pr
 
 ### Wireframes
 
-All pages on the site, with the exception of the landing page, feature a consistent design style, characterized by a shared background image and a clean white text box containing the content. 
-As a result, I'm only displaying the critical pages below. Despite minor differences, the overall appearance turned out pretty identical.
+All pages on the site, except for the landing page, feature a consistent design style, characterized by a shared background image and a clean white text box containing the content. 
+As a result, I'm only displaying the wireframes for the critical pages below. Despite minor differences, the overall appearance turned out pretty identical.
 
 - **Landing page**
 ---
@@ -320,7 +320,9 @@ As a result, I'm only displaying the critical pages below. Despite minor differe
 
 For future features, I plan on creating a model for the menu as well.
 
-![ERD]()
+The time field was changed from a TimeField to a CharField in early production due to a bug as seen in [TESTING.md](TESTING.md).
+
+![ERD](docs/images/erd.png)
 
 ### Color scheme
 I adapted the colors on the site to my hero image so it would look more cohesive across the site.
@@ -487,13 +489,12 @@ All the testing for this project can be found in a separate document [here](TEST
 [Username validation and login in django](https://itecnote.com/tecnote/username-validation-and-login-in-django/)
 
 
-[ER Diagram Tool | Free Online App](https://www.smartdraw.com/entity-relationship-diagram/er-diagram-tool.htm)
-
 ### Content 
 
 - The wireframes were created with Balsamiq.
 - The text content on the landing page was generated with ChatGPT.
 - The social media links directly to the home pages of each site.
+- The ERD diagram was created with [Smartdraw](https://www.smartdraw.com/entity-relationship-diagram/er-diagram-tool.htm).
 - Fonts were acquired from [Google Fonts](https://fonts.google.com/).
 - The icons in the footer were taken from [Font Awesome](https://fontawesome.com/).
 - The menu items were taken from [Cane Rum Society](https://www.canerumsociety.com/) and [Island Hoppers]((https://islandhoppers.se/meny)).
