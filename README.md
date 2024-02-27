@@ -31,6 +31,8 @@ Link to the live site here - [Calima](https://calima-665aec414d74.herokuapp.com/
 1. [**Agile**](#agile)
 1. [**Features**](#Features)
     * [***Navigation***](#navigation)
+        * [***Navigation - User***](#navigation---user)
+        * [***Navigation - Admin***](#navigation---admin)
     * [***Landing page***](#landing-page)
         * [***Hero image***](#hero-image)
         * [***About***](#about)
@@ -280,7 +282,6 @@ The following is a prioritized list outlining the scope of the project. These pr
 
 * Menu: Provide a comprehensive menu with categories and pricing.
 
-
 ### Wireframes
 
 All pages on the site, except for the landing page, feature a consistent design style, characterized by a shared background image and a clean white text box containing the content. 
@@ -325,7 +326,7 @@ The time field was changed from a TimeField to a CharField in early production d
 ![ERD](docs/images/erd.png)
 
 ### Color scheme
-I adapted the colors on the site to my hero image so it would look more cohesive across the site.
+I adapted the colors on the site to my hero image so it would look more cohesive across the site and the colors are also very Caribbean themed.
 I generated the colors from the hero image on [Coolors](https://coolors.co/).
 
 I utilized the Contrast grid by Eightshapes to test my color combos so the colors complied with the highest accessibility.
@@ -342,101 +343,150 @@ The fonts were sourced from Google Fonts.
 
 ## Agile
 
+Throughout the project, I followed the Agile methodology by using GitHub projects and issues. This allowed me to organize the project's tasks into epics and user stories, making it easy to manage them on the Kanban board. This helped break down the work into smaller parts, making development smoother and more efficient.
+By utilizing issues in GitHub and MSCW (MoSCoW Prioritization), I was also able to label and categorize the tasks to stay focused on the MVP. The "Won't Have's" of this project are still present on the Kanban board for future development.
 
+I decided not to use sprints in this project due to it being more of a team logic and it made more sense for me to work in tasks.
+Even though I worked on this project alone, using Agile principles helped me track progress effectively and ensure future maintenance.
 
 ## Features 
 
+I went with one design for the landing page, to make it more unique and one design for all the rest of the pages, to keep it simple and cohesive site-wide.
+
 ### Navigation
-- 
+- Navigation bar for users who are not logged in.
+- Functional links to all pages.
+- Hamburger icon with toggle function for smaller screens.
 
-![Navigation bar]()
+![Navigation bar](docs/images/features/nav.png)
 
+#### Navigation - User
+- Navigation bar for users who are logged in, authenticated with conditional statements in the base.html.
+- Functional links to all pages.
+- Visible indication of the logged in user.
+
+![Navigation bar](docs/images/features/user-nav.png)
+
+#### Navigation - Admin
+- Navigation bar for admin users who are logged in, authenticated with conditional statements in the base.html.
+- Functional links to all pages.
+- Visible indication of the logged in user.
+
+![Navigation bar](docs/images/features/admin-nav.png)
 
 ### Landing page
 
 #### Hero image
+- Image of a Caribbean beach as the hero image and a fitting heading to showcase the theme of the site.
+- A Trinidadian proverb as the heading, meaning: "It is better to overeat than to waste great food". Quoted from my own Uncle Errol to personalize the site.
 
-![Hero image]()
+I wanted
+
+![Hero image](docs/images/features/land.png)
 
 #### About
+- Brief introduction and description of the restaurant.
 
-![About image]()
+I wanted
+
+![About](docs/images/features/about.png)
 
 #### Menu
+- Brief explanation of the menu.
+- A functioning button to the menu.
 
-![Landing menu image]()
+I wanted
+
+![Landing menu](docs/images/features/land-menu.png)
 
 #### Book a table
+- Brief explanation of the ambiance of the restaurant.
+- A functioning button to the booking form.
 
-![Landing book table image]()
+I wanted
 
+![Landing book table](docs/images/features/land-book.png)
 
 ### Footer
-- 
+- Three sections with Opening hours, Address and Contact details.
+- Social links that lead to the home pages of each site.
 
-![Footer]()
+I wanted a simple footer with clear information that matched the color theme of the navigation to tie them together nicely.
 
+![Footer](docs/images/features/footer.png)
 
 ### AllAuth
 
 #### Register
-
-![Register]()
+![Register](docs/images/features/register.png)
 
 #### Login
-
-![Login]()
+![Login](docs/images/features/login.png)
 
 #### Logout
-
-![Logout]()
-
+![Logout](docs/images/features/logout.png)
 
 ### Menu
-- 
+- Static menu with Starters, Mains and Desserts sections.
+- Clear names of each menu item and prices underneath.
 
-![Menu]()
+I wanted
 
+![Menu](docs/images/features/menu.png)
 
 ### Booking form
+- Only accessible to logged in users.
+- Extensive booking form with pre-populated fields with the user details.
+- Booking requirements displayed to the user.
+- Error messages under each field if the added booking details do not match the requirements.
+- Error message under the navigation bar if the user tries to book a new booking with details that already exist in another booking on their profile.
 
-![Book a table]()
+I wanted
 
+![Booking form](docs/images/features/book.png)
 
 ### User
 
 #### Booking success
+- Only accessible to the user (not admin).
+- Page that comes up after a successful booking made by the user.
+- A brief "thank you" text and 
 
-![Book a table]()
+![Booking success](docs/images/features/book-success.png)
 
 #### Profile
 
-![Profile]()
+-
+
+![Profile](docs/images/features/profile.png)
 
 #### Edit/delete account
 
-![Edit/delete account]()
+-
+
+
+![Edit/delete account](docs/images/features/edit-acc.png)
+
+![Edit/delete bookings](docs/images/features/del-acc.png)
 
 #### Edit/delete bookings
 
-![Edit/delete bookings]()
+-
+- Error messages under each field if the added booking details do not match the requirements.
+- Error message under the navigation bar if the user tries to book a new booking with details that already exist in another booking on their profile.
 
 
-### Admin
+![Edit/delete bookings](docs/images/features/edit-book.png)
 
-#### Admin panel
-
-![Admin panel]()
-
+![Edit/delete bookings](docs/images/features/del-book.png)
 
 ### Future features
-- Admin profile (not just admin panel)
-- Dynamic menu page with a model and view (to filter, add/delete items with admin access etc) 
-- Reviews section (Add your own reviews)
-- An About page with more info about the restaurant etc
-- Contact page
-- Change password 
-- 500 and 404 error templates
+- CRUD - Admin profile (not just the Django admin panel) displaying all bookings, ability to edit/delete bookings and edit/delete details.
+- Dynamic menu page with a Model (add/delete items with admin access).
+- Reviews section on the landing page with user ability to add their own reviews.
+- An About page with more information about the restaurant (admin access to customise the page).
+- A Contact page for users to easily contact the restaurant.
+- 500 and 404 error templates.
 
 ## Deployment
 
@@ -446,7 +496,7 @@ To deploy the site to Heroku, I went through below steps:
 - Give your app a name (every name has to be unique on Heroku so it's ok if you can't name your project the same as on GitHub).
 - Choose your region (USA or Europe) and click "Create app".
 - You're then taken to the dashboard of your app where you have a navigation bar. Click on the Settings tab and scroll down to "Config Vars".
-- Click "Reveal Config Vars" and input any necessary environment variables (such as your database URL or secret key).
+- Click "Reveal Config Vars" and input any necessary environment variables (such as your database URL or secret key). **NOTE: This project utilized one secret key during development but it has since been updated.**
 - Go back to the navigation bar and select "Deploy".
 - Scroll down to the "Connect to GitHub" section and click on the Connect button.
 - After allowing Heroku access to GitHub, the "Connect to GitHub" section will allow you to search for the repository you wish to connect.

@@ -20,7 +20,7 @@
 
 ## Manual testing
 I manually tested this site in multiple ways highlighted below:
-* I tested every feature and its functionality as highlighted below in the User stories.
+* I tested every feature and its functionality as highlighted below in the [user stories](#user-stories).
 * I deployed the site in an early stage on Heroku to make sure everything was working as intended. 
 * I received invaluable feedback from my mentor David, students in my community, family members and friends working in the industry.
 * I tested the site for cross-compatibility in the two most used browsers, Chrome and Safari.

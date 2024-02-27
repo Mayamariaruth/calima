@@ -3,7 +3,7 @@
 {% block content %}
 
 <div class="bg-image">
-    <div class="container bg-white bg-opacity p-5 position-container booking-form">
+    <div class="container bg-white bg-opacity p-5 position-container booking-form text-center">
         <h1>Thank you for making a booking request with us at Calima!</h1>
         <hr>
         <p>We're thrilled to have you join us for an unforgettable dining experience. Your reservation request has been
@@ -16,10 +16,8 @@
         <p>Once again, thank you for choosing Calima. We can't wait to welcome you and make your visit truly
             exceptional!
         </p>
-        <div class="d-flex justify-content-center">
-            <a href="{% url 'profile_account' %}"
-                class="fs-6 fw-semibold btn btn-light btn-lg btn-border btn-outline-dark btn-color">View profile</a>
-        </div>
+        <a href="{% url 'profile_account' %}"
+            class="fs-6 fw-semibold btn btn-light btn-lg btn-border btn-outline-dark btn-color">View profile</a>
     </div>
 </div>
 
