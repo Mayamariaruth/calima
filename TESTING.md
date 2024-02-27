@@ -1,106 +1,126 @@
 # Testing 
 
 ## Table of Contents:
+1. [**Manual testing**](#manual-testing)
+    * [***User stories***](#user-stories)
+1. [**Validator testing**](#validator-testing)
+1. [**Lighthouse testing**](#lighthouse-testing)
+    * [***Landing page***](#landing-page)
+    * [***Menu***](#menu)
+    * [***Booking form***](#booking-form)
+    * [***Booking success***](#booking-success)
+    * [***Profile***](#profile)
+    * [***Edit account details***](#edit-account-details)
+    * [***Delete account***](#delete-account)
+    * [***Edit booking***](#edit-booking)
+    * [***Delete booking***](#delete-booking)
+1. [**Wave accessibility evaluation**](#wave-accessibility-evaluation)
 1. [**Bugs**](#bugs)
-    * [***Fixed Bugs***](#fixed-bugs)
     * [***Unfixed Bugs***](#unfixed-bugs)
 
-### Manual testing
+## Manual testing
 I manually tested this site in multiple ways highlighted below:
-* I tested every feature and its responsiveness through an extension of a live server in VScode.
+* I tested every feature and its functionality as highlighted below in the User stories.
 * I deployed the site in an early stage on Heroku to make sure everything was working as intended. 
 * I received invaluable feedback from my mentor David, students in my community, family members and friends working in the industry.
 * I tested the site for cross-compatibility in the two most used browsers, Chrome and Safari.
 * I used DevTools to easily move between different screen sizes, simulating sizes between 370px to 4000px (but it is also functional on even larger screens given the max-width setting on the Body element to keep the content compact instead of stretched).
 
-
-Expected -
-Testing -
-Result - 
-Fix -
-
 ### User stories
-User Story: As a site user, I can navigate the site content from the landing page so that I can access all the content easily and find what I'm looking for.
+* User Story: As a site user/admin, I can navigate the site content from the landing page so that I can access all the content easily and find what I'm looking for.
 
 Expected:
-
 The landing page should include a navigation bar with links to different pages.
 Each section on the landing page should have buttons to access the corresponding pages.
-Testing:
+Navigation bar pages should be adapted to the logged in user (profile page for users, admin panel for admin user).
 
+Testing:
 Visit the landing page.
 Look for a navigation bar at the top of the page.
-Check that the navigation bar contains links to all necessary pages (e.g., Home, Menu, Book, Register, Login).
-Verify that each section on the landing page includes buttons or links to access the relevant pages.
+Check that the navigation bar contains functioning links to all necessary pages (e.g., Home, Menu, Book, Register, Login).
+Verify that each section on the landing page includes functioning buttons to access the relevant pages.
+After logging in as both admin and user, verify that the authorized pages are showing up.
+
 Result:
-The landing page includes a navigation bar with links and buttons to access all site content.
+User profile page link displays in navigation bar when admin is logged in.
 
 Fix:
-N/A
+Add a context processor for the Admin user and adjust the conditional statement in the base.html.
 
-User Story: As a site user, I can register an account so that I can make a table booking.
+Result:
+The landing page includes a navigation bar with functioning links and buttons to access all site content smoothly based on authorization.
+
+* User Story: As a site user, I can register an account so that I can make a table booking.
 
 Expected:
-
 There should be a page for users to register an account.
 Users should be able to enter their details and have them authenticated.
-Testing:
+Password is validated.
 
+Testing:
 Navigate to the registration page.
 Fill out the registration form with valid details.
+User is asked to choose a new password if their input is not valid.
 Submit the form.
-Check that the system registers the user and authenticates their details.
+Check that the system registers the user and authenticates their details. 
+
 Result:
 Users can successfully register accounts, and their details are authenticated.
 
 Fix:
-N/A
+There were no bugs for the pages created with AllAuth.
 
-User Story: As a site user/admin, I can log in and log out of my account so that I can access the booking system.
+* User Story: As a site user/admin, I can log in and log out of my account so that I can access the booking system.
 
 Expected:
-
-There should be a login page where users/admins can enter their credentials.
-Upon successful authentication, users/admins should be directed to their account profile.
+There should be a login page where users/admins can enter their details.
+After verification of details, users/admins should be directed to their account profile or received errors for incorrect details.
+There should be a clear indication that you've logged in successfully.
 Users/admins should be able to log out from their accounts.
-Testing:
 
+Testing:
 Visit the login page.
-Enter valid login credentials.
+Enter valid login details for both user/admin.
 Submit the login form.
 Verify that the system authenticates the user/admin.
+Receive error message for incorrect details.
 Check that the user/admin is redirected to their account profile.
+Receive message for successfully logging in.
+Display in the navigation bar that the user is logged in.
 Log out from the account.
 Verify that the user/admin is logged out and redirected to the login page.
+Display message for successfully logging out.
+
 Result:
 Users/admins can successfully log in and out of their accounts, and authentication is functioning correctly.
 
 Fix:
-N/A
+There were no bugs for the pages created with AllAuth.
 
-User Story: As an admin user, I can log in to an admin account so that I can confirm/cancel requests and see all current/previous bookings.
+* User Story: As an admin user, I can log in to an admin account so that I can confirm/cancel requests and see all current/previous bookings.
 
 Expected:
-
-There should be a separate admin login page with access to an admin panel.
-Admins should be able to view all booking requests, confirmed bookings, and canceled bookings.
+Have a separate admin panel for authenticated admin users.
+Admin is taken to admin panel upon logging in.
+Admins should be able to view all booking requests.
 Admins should have the ability to filter bookings based on status and date.
-Testing:
+Admins should be able to approve/deny bookings.
+Admins should be able to edit/delete bookings.
 
-Visit the admin login page.
-Enter valid admin login credentials.
-Submit the login form.
-Check that the admin is redirected to the admin panel/dashboard.
-Navigate to the booking management section.
-Verify that all booking requests, confirmed bookings, and canceled bookings are displayed.
+Testing:
+Login with admin details.
+Check that the admin is redirected to the admin panel.
+Navigate to the Bookings section.
+Verify that all booking requests are displayed.
 Test the filtering functionality by filtering bookings based on status and date.
+
 Result:
 Admins can successfully log in to the admin account, access the admin panel, view bookings, and use the filtering functionality.
 
 Fix:
 N/A
 
-User Story: As a site user, I can access my account so that I can edit my details or delete my account.
+* User Story: As a site user, I can access my account so that I can edit my details or delete my account.
 
 Expected:
 
@@ -123,7 +143,7 @@ Users can successfully access their account, view, edit, and delete account deta
 Fix:
 N/A
 
-User Story: As a site user, I can send a booking request with all my details so that I can book a table with all the necessary details.
+* User Story: As a site user, I can send a booking request with all my details so that I can book a table with all the necessary details.
 
 Expected:
 
@@ -145,7 +165,7 @@ Users can successfully send a booking request with all necessary details, includ
 Fix:
 N/A
 
-User Story: As a site user, I can book a table based on the requirements so that I properly book a table and have a high chance of having it approved.
+* User Story: As a site user, I can book a table based on the requirements so that I properly book a table and have a high chance of having it approved.
 
 Expected:
 
@@ -165,7 +185,7 @@ Users can successfully book a table based on requirements and receive appropriat
 
 Fix:
 
-User Story: As a site user, I can edit/cancel my booking requests so that I can customize my requests and have control over my bookings.
+* User Story: As a site user, I can edit/cancel my booking requests so that I can customize my requests and have control over my bookings.
 
 Expected:
 
@@ -187,7 +207,7 @@ Users can successfully edit and cancel their booking requests, providing them wi
 Fix:
 N/A
 
-User Story: As an admin user, I can access each booking so that I can cancel/confirm the requests and see special requests/contact details for the user.
+* User Story: As an admin user, I can access each booking so that I can cancel/confirm the requests and see special requests/contact details for the user.
 
 Expected:
 
@@ -210,7 +230,7 @@ Admin users can successfully access, cancel, and confirm booking requests, and v
 Fix:
 Ensure that all booking details are properly displayed and actions such as canceling and confirming are functioning correctly.
 
-User Story: As a site user, I can access the menu for the restaurant so that I can see what food they have.
+* User Story: As a site user, I can access the menu for the restaurant so that I can see what food they have.
 
 Expected:
 
@@ -230,7 +250,7 @@ Users can successfully access the restaurant menu and view all menu items with c
 Fix:
 Ensure that the menu link is easily accessible and that all menu items are accurately listed with clear descriptions.
 
-User Story: As a site user/admin, I can receive confirmations on my actions on the site so that I know the actions have been fulfilled.
+* User Story: As a site user/admin, I can receive confirmations on my actions on the site so that I know the actions have been fulfilled.
 
 Expected:
 
@@ -254,9 +274,8 @@ Result:
 Users/admins receive confirmation messages for various actions such as sending booking requests, editing/deleting accounts, and editing/deleting booking requests.
 
 Fix:
-Ensure that confirmation messages are displayed consistently and accurately for all relevant actions on the site.
 
-### Validator Testing 
+## Validator testing 
 
 - HTML
   - There were no errors present when passing through the official W3C validator ![W3C validator](docs/images/w3html.png)
@@ -268,7 +287,7 @@ Ensure that confirmation messages are displayed consistently and accurately for 
   - There were no errors present when passing through the PEP8 CI Python linter ![PEP8](docs/images/pep8.png)
 
 
-### Lighthouse testing 
+## Lighthouse testing 
 
 This testing was done in an incognito window in Chrome to make sure the results were not influenced by browser extensions.
 
@@ -276,7 +295,7 @@ The lower scores were for two main reasons:
 - The cdn imports from bootstrap, Google fonts and Font Awesome.
 - Hero image and background image, which were compressed and even resized multiple times without a change in score. It was not possible to edit them further without a bigger change in quality.
 
-#### **Landing page**
+### **Landing page**
 - Desktop version:
 
 ![Desktop landing page](docs/images/lighthouse/land-desk.png)
@@ -285,7 +304,7 @@ The lower scores were for two main reasons:
 
 ![Mobile landing page](docs/images/lighthouse/land-mob.png)
 
-#### **Menu**
+### **Menu**
 
 - Desktop version:
 
@@ -295,7 +314,7 @@ The lower scores were for two main reasons:
 
 ![Mobile menu](docs/images/lighthouse/menu-mob.png)
 
-#### **Booking form**
+### **Booking form**
 
 - Desktop version:
 
@@ -305,7 +324,7 @@ The lower scores were for two main reasons:
 
 ![Mobile booking form](docs/images/lighthouse/form-mob.png)
 
-#### **Booking success**
+### **Booking success**
 
 - Desktop version:
 
@@ -315,7 +334,7 @@ The lower scores were for two main reasons:
 
 ![Mobile booking success](docs/images/lighthouse/success-mob.png)
 
-#### **Profile**
+### **Profile**
 
 - Desktop version:
 
@@ -325,7 +344,7 @@ The lower scores were for two main reasons:
 
 ![Mobile profile](docs/images/lighthouse/prof-mob.png)
 
-#### **Edit account details**
+### **Edit account details**
 
 - Desktop version:
 
@@ -335,7 +354,7 @@ The lower scores were for two main reasons:
 
 ![Mobile edit account details](docs/images/lighthouse/edit-acc-mob.png)
 
-#### **Delete account**
+### **Delete account**
 
 - Desktop version:
 
@@ -345,7 +364,7 @@ The lower scores were for two main reasons:
 
 ![Mobile delete account](docs/images/lighthouse/del-acc-mob.png)
 
-#### **Edit booking**
+### **Edit booking**
 
 - Desktop version:
 
@@ -355,7 +374,7 @@ The lower scores were for two main reasons:
 
 ![Mobile edit booking](docs/images/lighthouse/edit-book-mob.png)
 
-#### **Delete booking**
+### **Delete booking**
 
 - Desktop version:
 
@@ -365,15 +384,15 @@ The lower scores were for two main reasons:
 
 ![Mobile delete booking](docs/images/lighthouse/del-book-mob.png)
 
-### Wave accessibility evaluation
+## Wave accessibility evaluation
 
 I also used the Wave evaluation tool to make sure I covered all my bases. 
 
 The evaluation is free from errors on all pages.
 
-![Wave evaluation](docs)
+![Wave evaluation](docs/images/wave.png)
 
-### Bugs
+## Bugs
 
 CSS styling not showing up properly in deployed project (only some styling showing up) - manually collect static
 - Project deployment failing due to database error - Add elephantSQL instance link in Config Vars
@@ -385,6 +404,6 @@ CSS styling not showing up properly in deployed project (only some styling showi
 - after creating a new account, Book page is not accessible ("GET /booking/book/ HTTP/1.1" 302 0 **and** “GET /accounts/login/ HTTP/1.1" 302 0) - change book_table view to 
 - updated color on error messages alerts not showing, color was just white of the alerts - use dev tools to find what class and css styling was being used and add that to stylesheet
 
-#### Unfixed Bugs
+### Unfixed Bugs
 - When there are too many bookings displayed on the user's profile, there is no space between the white box containing the bookings and the footer. However, the actual content remains visible. 
 I chose not to address this issue because the staff will routinely clear all unnecessary bookings from the system on a weekly basis. Additionally, it's unlikely that users will have an excessive number of bookings simultaneously.

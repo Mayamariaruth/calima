@@ -55,7 +55,7 @@ Link to the live site here - [Calima](https://calima-665aec414d74.herokuapp.com/
     * [***Cloning***](#cloning)
 1. [**Testing**](#testing)
 1. [**Credits**](#credits)
-    * [***Installs***](#installs)
+    * [***Technologies***](#technologies)
     * [***Code***](#code)
     * [***Content***](#content)
     * [***Media***](#media)
@@ -430,8 +430,13 @@ The fonts were sourced from Google Fonts.
 
 
 ### Future features
-- 
-
+- Admin profile (not just admin panel)
+- Dynamic menu page with a model and view (to filter, add/delete items with admin access etc) 
+- Reviews section (Add your own reviews)
+- An About page with more info about the restaurant etc
+- Contact page
+- Change password 
+- 500 and 404 error templates
 
 ## Deployment
 
@@ -478,16 +483,12 @@ All the testing for this project can be found in a separate document [here](TEST
 ### Code 
 
 - I drew help from the walk-through of the Codestar project. There are similarities in some of the code but I adapted it to fit the aims of this project.
-- 
-
-
-[How To Create Custom Context Processors in Django](https://djangocentral.com/how-to-create-custom-context-processors-in-django/)
-[Removing ‘Sites’ from Django admin page](https://itecnote.com/tecnote/removing-sites-from-django-admin-page/)
-[Django admin page Removing 'Group'](https://stackoverflow.com/questions/13229235/django-admin-page-removing-group)
-[Django - Update User Profile](https://dev.to/earthcomfy/django-update-user-profile-33ho)
-[Django Username or Email Authenticate](https://forum.djangoproject.com/t/django-username-or-email-authenticate/2775/5)
-[Username validation and login in django](https://itecnote.com/tecnote/username-validation-and-login-in-django/)
-
+- [Context Processors](https://djangocentral.com/how-to-create-custom-context-processors-in-django/)
+- [Removing ‘Sites’ from Django admin page](https://itecnote.com/tecnote/removing-sites-from-django-admin-page/)
+- [Django admin page Removing 'Group'](https://stackoverflow.com/questions/13229235/django-admin-page-removing-group)
+- [Django - Update User Profile](https://dev.to/earthcomfy/django-update-user-profile-33ho)
+- [Django Username or Email Authenticate](https://forum.djangoproject.com/t/django-username-or-email-authenticate/2775/5)
+- [Username validation and login in django](https://itecnote.com/tecnote/username-validation-and-login-in-django/)
 
 ### Content 
 

@@ -14,7 +14,7 @@ class AdminBooking(admin.ModelAdmin):
         'email', 'number_of_people',
         'date', 'time', 'date_of_request',
         )
-    list_filter = ('first_name', 'date', 'time', 'date_of_request',)
+    list_filter = ('status', 'first_name', 'date', 'time', 'date_of_request',)
 
 
 admin.site.unregister(SocialToken)
