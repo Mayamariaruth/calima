@@ -11,7 +11,7 @@ a {
 }
 
 .bg-image {
-    background: url(../images/bg-mobile.jpg) no-repeat center center/cover;
+    background: url(../images/bg.jpg) no-repeat center center/cover;
     min-height: 100vh;
     background-color: rgba(41, 134, 112, 0.8);
     overflow: auto;
@@ -65,7 +65,7 @@ nav {
 
 /* Landing page */
 .hero-image {
-    background: url(../images/hero-mobile.jpeg) no-repeat center center/cover;
+    background: url(../images/hero-image.jpeg) no-repeat center center/cover;
     height: 100vh;
     background-color: #298670;
 }
@@ -174,19 +174,6 @@ footer {
 }
 
 @media (min-width: 768px) {
-    .bg-image {
-        background: url(../images/bg.jpg) no-repeat center center/cover;
-        min-height: 100vh;
-        background-color: rgba(41, 134, 112, 0.8);
-        overflow: auto;
-    }
-    
-    .hero-image {
-        background: url(../images/hero-image.jpeg) no-repeat center center/cover;
-        height: 100vh;
-        background-color: #298670;
-    }
-
     #heading {
         font-size: 3.4rem;
     }
