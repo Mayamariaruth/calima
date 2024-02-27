@@ -66,7 +66,7 @@ Link to the live site here - [Calima](https://calima-665aec414d74.herokuapp.com/
 ## Planning
 
 ### User stories
-As a site user I can navigate the site content from the landing page so that I can access all the content easily and find what I'm looking for
+As a site user, I can navigate the site content from the landing page so that I can access all the content easily and find what I'm looking for
 
 - Acceptance Criteria
     * Have a navigation bar with links to the different pages
@@ -76,7 +76,7 @@ As a site user I can navigate the site content from the landing page so that I c
     * Have buttons in each section to access the different pages
 
 
-As a site user I can register an account so that I can make a table booking
+As a site user, I can register an account so that I can make a table booking
 
 - Acceptance Criteria
     * Have a page for users to register an account
@@ -86,7 +86,7 @@ As a site user I can register an account so that I can make a table booking
     * Details are authenticated
 
 
-As a site user/admin I can log in and logout out of my account so that I can access the booking system
+As a site user/admin, I can log in and log out of my account so that I can access the booking system
 
 - Acceptance Criteria
     * Have a login page
@@ -98,17 +98,17 @@ As a site user/admin I can log in and logout out of my account so that I can acc
     * They are taken to their account profile and can access the booking form
 
 
-As a admin user I can log in to an admin account so that I can confirm/cancel requests and see all current/previous bookings
+As a admin user, I can log in to an admin account so that I can confirm/cancel requests and see all current/previous bookings
 
 - Acceptance Criteria
-    * Have an admin log in with an admin panel
+    * Have an admin login with an admin panel
 
-    * See all booking requests, confirmed bookings and cancelled bookings
+    * See all booking requests, confirmed bookings and canceled bookings
 
     * Ability to filter all bookings based on status and date
 
 
-As a site user I can access my account so that I can edit my details or delete my account
+As a site user, I can access my account so that I can edit my details or delete my account
 
 - Acceptance Criteria
     * Have a profile dashboard
@@ -120,7 +120,7 @@ As a site user I can access my account so that I can edit my details or delete m
     * Delete my account
 
 
-As a site user I can send a booking request with all my details so that I can book a table with all the necessary details
+As a site user, I can send a booking request with all my details so that I can book a table with all the necessary details
 
 - Acceptance Criteria
     * Booking request form includes my personal details, time, date and guest options
@@ -130,7 +130,7 @@ As a site user I can send a booking request with all my details so that I can bo
     * Special request section
 
 
-As a site user I can book a table based on the requirements so that I properly book a table and have a high chance of having it approved
+As a site user, I can book a table based on the requirements so that I properly book a table and have a high chance of having it approved
 
 - Acceptance Criteria 
 
@@ -141,7 +141,7 @@ As a site user I can book a table based on the requirements so that I properly b
     * I get an error if I've already made an identical booking
 
 
-As a site user I can edit/cancel my booking requests so that I can customize my requests and have control over my bookings
+As a site user, I can edit/cancel my booking requests so that I can customize my requests and have control over my bookings
 
 - Acceptance Criteria
     * See all my requests on my profile
@@ -151,7 +151,7 @@ As a site user I can edit/cancel my booking requests so that I can customize my 
     * Cancel the requests
 
 
-As a admin user I can access each booking so that I can cancel/confirm the requests and see special requests/contact details for the user
+As a admin user, I can access each booking so that I can cancel/confirm the requests and see special requests/contact details for the user
 
 - Acceptance Criteria
     * Admin access to every booking
@@ -161,7 +161,7 @@ As a admin user I can access each booking so that I can cancel/confirm the reque
     * Ability to see all customer details and booking request details in each booking
 
 
-As a site user I can access the menu for the restaurant so that I can see what food they have
+As a site user, I can access the menu for the restaurant so that I can see what food they have
 
 - Acceptance Criteria
     * Link to the menu from the landing page and navigation bar
@@ -171,7 +171,7 @@ As a site user I can access the menu for the restaurant so that I can see what f
     * Clear headings and descriptive names of each menu item
 
 
-As a site user/admin I can receive confirmations on my actions on the site so that I know the actions have been fulfilled
+As a site user/admin, I can receive confirmations on my actions on the site so that I know the actions have been fulfilled
 
 - Acceptance Criteria
     * Confirmation when I've sent a booking request
@@ -182,7 +182,7 @@ As a site user/admin I can receive confirmations on my actions on the site so th
 
 
 #### Dropped
-As a admin user I can access the menu page so that I can edit/delete menu items
+As an admin user, I can access the menu page so that I can edit/delete menu items
 
 - Acceptance Criteria
     * Admin access to the menu page
@@ -192,7 +192,7 @@ As a admin user I can access the menu page so that I can edit/delete menu items
     * Delete menu items
 
 
-As a site user I can access an about page for the restaurant so that I can get more information about the restaurant
+As a site user, I can access an About page for the restaurant so that I can get more information about the restaurant
 
 - Acceptance Criteria
     * Page accessible from the navigation bar and landing page
@@ -202,7 +202,7 @@ As a site user I can access an about page for the restaurant so that I can get m
     * Images of the restaurant and the Caribbean
 
 
-As a admin user I can edit the about page so that I can control what information is displayed
+As an admin user, I can edit the About page so that I can control what information is displayed
 
 - Acceptance Criteria
     * Admin access to the About page
@@ -212,7 +212,7 @@ As a admin user I can edit the about page so that I can control what information
     * Add/delete images
 
 
-As a site user I can contact the restaurant through the site so that I can easier get into contact with the restaurant
+As a site user, I can contact the restaurant through the site so that I can easier get into contact with the restaurant
 
 - Acceptance Criteria
     * A contact page accessible from the navigation bar
@@ -222,7 +222,7 @@ As a site user I can contact the restaurant through the site so that I can easie
     * Pre-populated user details for logged in users
 
 
-As a site user I can access other people's reviews and add my own reviews on the site so that I can see what people think about the restaurant and add my own opinion to the mix
+As a site user, I can access other people's reviews and add my own reviews on the site so that I can see what people think about the restaurant and add my own opinion to the mix
 
 - Acceptance Criteria
     * Reviews section on the landing page
@@ -240,7 +240,7 @@ The primary goal of the website is to increase the visibility of Calima online a
 By having a strong online presence, we aim to attract more customers, especially tourists and locals searching for unique Caribbean dining experiences where they would never expect it!
 By having a platform for engaging with customers beyond their dining experience and enabling efficient table bookings helps Calima better manage resources and provide a seamless experience for both staff and guests.
 
-The website should reflect the ambiance of Calima and through high-quality visuals and user-friendly design, we aim to convey the restaurants's personality in a genuine way.
+The website should reflect the ambiance of Calima and through high-quality visuals and user-friendly design, we aim to convey the restaurant's personality genuinely.
 
 ### Scope
 
@@ -326,7 +326,7 @@ The time field was changed from a TimeField to a CharField in early production d
 ![ERD](docs/images/erd.png)
 
 ### Color scheme
-I adapted the colors on the site to my hero image so it would look more cohesive across the site and the colors are also very Caribbean themed.
+I adapted the colors on the site to my hero image so it would look more cohesive across the site and the colors are also very Caribbean-themed.
 I generated the colors from the hero image on [Coolors](https://coolors.co/).
 
 I utilized the Contrast grid by Eightshapes to test my color combos so the colors complied with the highest accessibility.
@@ -346,7 +346,7 @@ The fonts were sourced from Google Fonts.
 Throughout the project, I followed the Agile methodology by using GitHub projects and issues. This allowed me to organize the project's tasks into epics and user stories, making it easy to manage them on the Kanban board. This helped break down the work into smaller parts, making development smoother and more efficient.
 By utilizing issues in GitHub and MSCW (MoSCoW Prioritization), I was also able to label and categorize the tasks to stay focused on the MVP. The "Won't Have's" of this project are still present on the Kanban board for future development.
 
-I decided not to use sprints in this project due to it being more of a team logic and it made more sense for me to work in tasks.
+I decided not to use sprints in this project due to it being more of a team logic and it made more sense for me to work in a task-based manner.
 Even though I worked on this project alone, using Agile principles helped me track progress effectively and ensure future maintenance.
 
 ## Features 
@@ -369,7 +369,7 @@ I went with one design for the landing page, to make it more unique and one desi
 
 #### Navigation - Admin
 - Navigation bar for admin users who are logged in, authenticated with conditional statements in the base.html.
-- Functional links to all pages.
+- Functional links to all pages, including the Django admin panel that serves as the admin profile in this project.
 - Visible indication of the logged in user.
 
 ![Navigation bar](docs/images/features/admin-nav.png)
@@ -380,14 +380,10 @@ I went with one design for the landing page, to make it more unique and one desi
 - Image of a Caribbean beach as the hero image and a fitting heading to showcase the theme of the site.
 - A Trinidadian proverb as the heading, meaning: "It is better to overeat than to waste great food". Quoted from my own Uncle Errol to personalize the site.
 
-I wanted
-
 ![Hero image](docs/images/features/land.png)
 
 #### About
 - Brief introduction and description of the restaurant.
-
-I wanted
 
 ![About](docs/images/features/about.png)
 
@@ -395,23 +391,17 @@ I wanted
 - Brief explanation of the menu.
 - A functioning button to the menu.
 
-I wanted
-
 ![Landing menu](docs/images/features/land-menu.png)
 
 #### Book a table
 - Brief explanation of the ambiance of the restaurant.
 - A functioning button to the booking form.
 
-I wanted
-
 ![Landing book table](docs/images/features/land-book.png)
 
 ### Footer
 - Three sections with Opening hours, Address and Contact details.
 - Social links that lead to the home pages of each site.
-
-I wanted a simple footer with clear information that matched the color theme of the navigation to tie them together nicely.
 
 ![Footer](docs/images/features/footer.png)
 
@@ -430,51 +420,54 @@ I wanted a simple footer with clear information that matched the color theme of 
 - Static menu with Starters, Mains and Desserts sections.
 - Clear names of each menu item and prices underneath.
 
-I wanted
-
 ![Menu](docs/images/features/menu.png)
 
 ### Booking form
 - Only accessible to logged in users.
 - Extensive booking form with pre-populated fields with the user details.
-- Booking requirements displayed to the user.
+- Booking requirements are displayed to the user.
 - Error messages under each field if the added booking details do not match the requirements.
 - Error message under the navigation bar if the user tries to book a new booking with details that already exist in another booking on their profile.
-
-I wanted
 
 ![Booking form](docs/images/features/book.png)
 
 ### User
 
 #### Booking success
-- Only accessible to the user (not admin).
 - Page that comes up after a successful booking made by the user.
-- A brief "thank you" text and 
+- A brief "thank you" text and information of what is next to come.
+- A button to the user profile.
+- Success message under the navigation bar.
 
 ![Booking success](docs/images/features/book-success.png)
 
 #### Profile
+- CRUD - User profile only accessible by the user (not admin).
+- Highlights the user account details.
+- Highlights the user's booking details.
+- Buttons to edit/delete the account.
+- Buttons to edit/delete the bookings (on smaller screens the buttons are removed to save space and one main action button is added with a dropdown list of the actions).
+- Success messages under navigation bar after completed actions (edit/delete).
 
--
+This is the CRUD operation of the site, where a user can view, edit and delete information.
+For future features, I wanted to create a similar profile for the admin instead of just the admin panel built by Django.
 
 ![Profile](docs/images/features/profile.png)
 
 #### Edit/delete account
-
--
-
+- Edit user account details form.
+- Error messages under each field if the new account details are already in use.
+- Delete account confirmation page with buttons to delete or cancel.
 
 ![Edit/delete account](docs/images/features/edit-acc.png)
 
 ![Edit/delete bookings](docs/images/features/del-acc.png)
 
 #### Edit/delete bookings
-
--
-- Error messages under each field if the added booking details do not match the requirements.
+- Edit booking details form.
+- Error messages under each field if the added booking details do not match the booking requirements.
 - Error message under the navigation bar if the user tries to book a new booking with details that already exist in another booking on their profile.
-
+- Delete booking confirmation page with buttons to delete or cancel.
 
 ![Edit/delete bookings](docs/images/features/edit-book.png)
 
@@ -484,7 +477,7 @@ I wanted
 - CRUD - Admin profile (not just the Django admin panel) displaying all bookings, ability to edit/delete bookings and edit/delete details.
 - Dynamic menu page with a Model (add/delete items with admin access).
 - Reviews section on the landing page with user ability to add their own reviews.
-- An About page with more information about the restaurant (admin access to customise the page).
+- An About page with more information about the restaurant (admin access to customize the page).
 - A Contact page for users to easily contact the restaurant.
 - 500 and 404 error templates.
 
@@ -525,14 +518,16 @@ All the testing for this project can be found in a separate document [here](TEST
 ### Technologies
 
 - The packages installed for this project can be found in [the requirements.txt](requirements.txt).
-- Django was used as the python framework.
-- Django AllAuth was used for the user authentication and register, sign up and login tasks.
+- Django was used as the Python framework.
+- Django AllAuth was used for the user authentication and register, sign-up and login tasks.
 - ElephantSQL was used for the database during development and in deployment.
 - Bootstrap 5.3.2 was used to style HTML, CSS and minor JavaScript.
 
 ### Code 
 
 - I drew help from the walk-through of the Codestar project. There are similarities in some of the code but I adapted it to fit the aims of this project.
+
+Below are links that helped me adapt/build certain features:
 - [Context Processors](https://djangocentral.com/how-to-create-custom-context-processors-in-django/)
 - [Removing ‘Sites’ from Django admin page](https://itecnote.com/tecnote/removing-sites-from-django-admin-page/)
 - [Django admin page Removing 'Group'](https://stackoverflow.com/questions/13229235/django-admin-page-removing-group)
@@ -557,8 +552,8 @@ All the testing for this project can be found in a separate document [here](TEST
 - [Am I Responsive](https://ui.dev/amiresponsive) was used to generate the initial image of the ReadME to showcase how the site looks on different screens.
 
 ### General references:
--[W3Schools](https://www.w3schools.com/)
--[Stack Overflow](https://stackoverflow.com/)
--[Geeks for Geeks](https://www.geeksforgeeks.org/)
--[Bootstrap Documentation](https://getbootstrap.com/)
--[Django Documentation](https://docs.djangoproject.com/en/3.2/)
+- [W3Schools](https://www.w3schools.com/)
+- [Stack Overflow](https://stackoverflow.com/)
+- [Geeks for Geeks](https://www.geeksforgeeks.org/)
+- [Bootstrap Documentation](https://getbootstrap.com/)
+- [Django Documentation](https://docs.djangoproject.com/en/3.2/)
