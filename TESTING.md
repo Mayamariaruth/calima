@@ -272,38 +272,119 @@ Ensure that confirmation messages are displayed consistently and accurately for 
 
 This testing was done in an incognito window in Chrome to make sure the results were not influenced by browser extensions.
 
-In general Mobile scores were lower in performance for two main reasons, cdn imports from bootstrap, jquery, and the already compressed (multiple times hero images).
+The lower scores were for two main reasons:
+- The cdn imports from bootstrap, Google fonts and Font Awesome.
+- Hero image and background image, which were compressed and even resized multiple times without a change in score. It was not possible to edit them further without a bigger change in quality.
 
-__Desktop version:__
+#### **Landing page**
+- Desktop version:
 
-![Desktop landing page](docs/screenshots/lighthouse-desktop.png)
+![Desktop landing page](docs/images/lighthouse/land-desk.png)
 
-#### Home front page 
-__Mobile version:__
+- Mobile version:
 
-![Mobile home page](docs/screenshots/home-mobile.png)
+![Mobile landing page](docs/images/lighthouse/land-mob.png)
 
-#### Quiz area
+#### **Menu**
 
-__Mobile version:__
+- Desktop version:
 
-![Mobile quiz page](docs/screenshots/quiz-mobile.png)
+![Desktop menu](docs/images/lighthouse/menu-desk.png)
+
+- Mobile version:
+
+![Mobile menu](docs/images/lighthouse/menu-mob.png)
+
+#### **Booking form**
+
+- Desktop version:
+
+![Desktop booking form](docs/images/lighthouse/form-desk.png)
+
+- Mobile version:
+
+![Mobile booking form](docs/images/lighthouse/form-mob.png)
+
+#### **Booking success**
+
+- Desktop version:
+
+![Desktop booking success](docs/images/lighthouse/success-desk.png)
+
+- Mobile version:
+
+![Mobile booking success](docs/images/lighthouse/success-mob.png)
+
+#### **Profile**
+
+- Desktop version:
+
+![Desktop profile](docs/images/lighthouse/prof-desk.png)
+
+- Mobile version:
+
+![Mobile profile](docs/images/lighthouse/prof-mob.png)
+
+#### **Edit account details**
+
+- Desktop version:
+
+![Desktop edit account details](docs/images/lighthouse/edit-acc-desk.png)
+
+- Mobile version:
+
+![Mobile edit account details](docs/images/lighthouse/edit-acc-mob.png)
+
+#### **Delete account**
+
+- Desktop version:
+
+![Desktop delete account](docs/images/lighthouse/del-acc-desk.png)
+
+- Mobile version:
+
+![Mobile delete account](docs/images/lighthouse/del-acc-mob.png)
+
+#### **Edit booking**
+
+- Desktop version:
+
+![Desktop edit booking](docs/images/lighthouse/edit-book-desk.png)
+
+- Mobile version:
+
+![Mobile edit booking](docs/images/lighthouse/edit-book-mob.png)
+
+#### **Delete booking**
+
+- Desktop version:
+
+![Desktop delete booking](docs/images/lighthouse/del-book-desk.png)
+
+- Mobile version:
+
+![Mobile delete booking](docs/images/lighthouse/del-book-mob.png)
 
 ### Wave accessibility evaluation
 
 I also used the Wave evaluation tool to make sure I covered all my bases. 
 
-The evaluation is free from errors and below is taken from the Home page and quiz page.
+The evaluation is free from errors on all pages.
 
-#### Wave home page
-![Wave evaluation](docs/screenshots/wave-home.png)
-
-#### Wave quiz page
-![Wave evaluation](docs/screenshots/wave-quiz.png)
+![Wave evaluation](docs)
 
 ### Bugs
 
-- 
+CSS styling not showing up properly in deployed project (only some styling showing up) - manually collect static
+- Project deployment failing due to database error - Add elephantSQL instance link in Config Vars
+- form not showing in html - I had added the form in the tag as {{ BookingForm| crispy }}, worked when I updated it to {{ form|crispy }}
+- the form times receive error message (Select a valid choice. 10:00 AM is not one of the available choices) with every time option - change available_times to a list of tuples and change the time field to a Charfield
+- admin panel not showing up in navbar when admin is logged in - create a context processor for admin user for site-wide usage
+- edit details form didn’t update the details that were changed, but updated all fields instead which raised the validation error for all fields with validation - created instance model to check for the field that changed and only validate those details
+- bookings associated to user were disconnected when user updated account details - add user field in Model and connect bookings to user ID and add a view to validate the bookings to the new user details
+- after creating a new account, Book page is not accessible ("GET /booking/book/ HTTP/1.1" 302 0 **and** “GET /accounts/login/ HTTP/1.1" 302 0) - change book_table view to 
+- updated color on error messages alerts not showing, color was just white of the alerts - use dev tools to find what class and css styling was being used and add that to stylesheet
 
 #### Unfixed Bugs
-- When too many bookings on profile, there is no space between white box and footer (but the actual content is still visible) but I decided not to fix that since staff would be clearing all bookings weekly from the system that are not necessary and we dont expect users to have that many bookings 
+- When there are too many bookings displayed on the user's profile, there is no space between the white box containing the bookings and the footer. However, the actual content remains visible. 
+I chose not to address this issue because the staff will routinely clear all unnecessary bookings from the system on a weekly basis. Additionally, it's unlikely that users will have an excessive number of bookings simultaneously.
