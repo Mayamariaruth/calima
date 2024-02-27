@@ -58,7 +58,9 @@ class EditBookingForm(forms.ModelForm):
         date = self.cleaned_data.get('date')
 
         if date == datetime.date.today():
-            raise forms.ValidationError("It is not possible to book same-day bookings.")
+            raise forms.ValidationError(
+                "It is not possible to book same-day bookings."
+            )
         elif date and date < datetime.date.today():
             raise forms.ValidationError("Booking date cannot be in the past.")
 

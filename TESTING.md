@@ -257,24 +257,26 @@ Fix:
 Ensure that confirmation messages are displayed consistently and accurately for all relevant actions on the site.
 
 ### Validator Testing 
-I tested all the pages in the validators to make sure they all passed.
+
 - HTML
-  - There were no errors present when passing through the official W3C validator ![W3C validator]()
+  - There were no errors present when passing through the official W3C validator ![W3C validator](docs/images/w3html.png)
 
 - CSS
-  - There were no errors present when passing through the official Jigsaw validator ![(Jigsaw) validator]()
+  - There were no errors present when passing through the official Jigsaw validator with direct input ![(Jigsaw) validator](docs/images/w3css.png)
+
+- PEP8
+  - There were no errors present when passing through the PEP8 CI Python linter ![PEP8](docs/images/pep8.png)
+
 
 ### Lighthouse testing 
 
 This testing was done in an incognito window in Chrome to make sure the results were not influenced by browser extensions.
 
-The desktop testing was the same score for the home page and quiz page but the mobile testing differed by just a couple of points but both pages scored incredibly well.
-
-At first, the mobile testing was in the high 80s score but after compressing the background image, the scores went up into the 90s range.
+In general Mobile scores were lower in performance for two main reasons, cdn imports from bootstrap, jquery, and the already compressed (multiple times hero images).
 
 __Desktop version:__
 
-![Desktop home page](docs/screenshots/lighthouse-desktop.png)
+![Desktop landing page](docs/screenshots/lighthouse-desktop.png)
 
 #### Home front page 
 __Mobile version:__
